@@ -1,131 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<title>HTML Academy: Девайс</title>
 </head>
+
 <body>
- 	<header class="main-header">
-  		<nav class="main-navigation">
-  			<a class="main-header-logo" href="index.html">
+	<header class="main-header">
+		<nav class="main-navigation">
+			<a class="main-header-logo" href="index.html">
   				<img src="img/" width="" height="" alt="Логотип магазина Девайс">
   			</a>
-  			<!--формы сверху пока что не буду верстать -->
-  			<ul class="site-navigation">
-  				<li>
-  					<a href="catalog.html">
-  						Каталог товаров
-  							<ul>
-								<li>Визуальная реальность</li>
-								<li>Моноподы для селфи</li>
-								<li>Экшн-камеры</li>
-								<li>Фитнес-браслеты</li>
-								<li>Умные часы</li>
-								<li>Квадрокоптеры</li>
-  							</ul>
-  					</a>
-  				</li>
-  				<li><a href="delivery.html">Доставка</a></li>
-  				<li><a href="guarantee.html">Гарантия</a></li>
-  				<li><a href="contacts.html">Контакты</a></li>
-  			</ul>
-  		</nav>  		
-    </header>
-    
-    <main class="container">
-    	<h1 class="page-title">Моноподы для селфи</h1>
-    	
-    	<ul class="breadcrumbs">
-        	<li><a href="index.html">Главная</a></li>
-        	<li><a href="catalog.html">Каталог товаров</a></li>
-        	<li class="breadcrumbs-current">Моноподы для селфи</li>
-        </ul>
-        
-        <section class="filters">
-        	<h2>Фильтр</h2><!--тут явно не h2 но пока оставлю так-->
-        	<!-- Здесь будет форма -->
-        </section>
-        
-        <section class="sorting">
-        	<h2>Сортировка</h2><!--тут явно не h2 но пока оставлю так-->
-        	<!--Здесь не знаю то ли форма,то ли список и кнопки.Пока не буду делать-->
-        </section>
-        
-        <section class="catalog">
-        	<h2 class="visually-hidden">Список моноподов</h2>
-        	<ul class="catalog-list">
-          		<li class="catalog-item">
-          			<h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
-          			<span>500 руб.</span>
-          			<p>
-						<a href="catalog-item.html"><img src="img/" width="" height="" alt="Любительская селфи-палка"></a>
-            		</p>
-          		</li>
-          		<li class="catalog-item">
-          			<h3><a href="catalog-item.html">Профессиональная сселфи-палка</a></h3>
-          			<span>1500 руб.</span>
-          			<p>
-						<a href="catalog-item.html"><img src="img/" width="" height="" alt="Профессиональная сселфи-палка"></a>
-            		</p>
-          		</li>
-          		<li class="catalog-item">
-          			<h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
-          			<span>2500 руб.</span>
-          			<p>
-						<a href="catalog-item.html"><img src="img/" width="" height="" alt="Непотопляемая селфи-палка"></a>
-            		</p>
-          		</li>
-          		<li class="catalog-item">
-          			<h3><a href="catalog-item.html">Селфи-палка следуй за мной</a></h3>
-          			<span>4900 руб.</span>
-          			<p>
-						<a href="catalog-item.html"><img src="img/" width="" height="" alt="Селфи-палка следуй за мной"></a>
-            		</p>
-          		</li>
-        	</ul>
-        	
-        	<ul class="pagination-list">
-         		<li class="pagination-item"><a href="#">Назад</a></li>
-          		<li class="pagination-item pagination-item-current"><a>1</a></li>
-          		<li class="pagination-item"><a href="#">2</a></li>
-          		<li class="pagination-item"><a href="#">3</a></li>
-          		<li class="pagination-item"><a href="#">Вперед</a></li>
-        	</ul>
-        	
-        </section>    
-    </main>
-    
-    <footer class="main-footer">
+			<!--формы сверху пока что не буду верстать -->
+			<ul class="site-navigation">
+				<li>
+					<a>Каталог товаров</a>
+					<ul>
+						<li><a href="catalog.html#vr">Визуальная реальность</a></li>
+						<li><a href="catalog.html#sf">Моноподы для селфи</a></li>
+						<li><a href="catalog.html#ac">Экшн-камеры</a></li>
+						<li><a href="catalog.html#fb">Фитнес-браслеты</a></li>
+						<li><a href="catalog.html#sw">Умные часы</a></li>
+						<li><a href="catalog.html#kv">Квадрокоптеры</a></li>
+					</ul>
+
+				</li>
+				<li><a href="delivery.html">Доставка</a></li>
+				<li><a href="guarantee.html">Гарантия</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container">
+		<h1 class="page-title">Моноподы для селфи</h1>
+
+		<ul class="breadcrumbs">
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="catalog.html">Каталог товаров</a></li>
+			<li class="breadcrumbs-current">Моноподы для селфи</li>
+		</ul>
+
+		<section class="filters">
+			<h2>Фильтр</h2>
+			<!--тут явно не h2 но пока оставлю так-->
+			<!-- Здесь будет форма -->
+		</section>
+
+		<section class="sorting">
+			<h2>Сортировка</h2>
+			<!--тут явно не h2 но пока оставлю так-->
+			<!--Здесь не знаю то ли форма,то ли список и кнопки.Пока не буду делать-->
+		</section>
+
+		<section class="catalog">
+			<h2 class="visually-hidden">Список моноподов</h2>
+			<ul class="catalog-list">
+				<li class="catalog-item">
+					<h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
+					<span>500 руб.</span>
+					<p>
+						<img src="img/" width="" height="" alt="Любительская селфи-палка">
+						<button>Добавить к сравнению</button><!--я думаю это кнопка -->
+						<button>В корзину</button>
+					</p>
+				</li>
+				<li class="catalog-item">
+					<h3><a href="catalog-item.html">Профессиональная сселфи-палка</a></h3>
+					<span>1500 руб.</span>
+					<p>
+						<img src="img/" width="" height="" alt="Профессиональная сселфи-палка">			
+						<button>Добавить к сравнению</button><!--я думаю это кнопка -->
+						<button>В корзину</button>
+					</p>
+				</li>
+				<li class="catalog-item">
+					<h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
+					<span>2500 руб.</span>
+					<p>
+						<img src="img/" width="" height="" alt="Непотопляемая селфи-палка">
+						<button>Добавить к сравнению</button><!--я думаю это кнопка -->
+						<button>В корзину</button>
+					</p>
+				</li>
+				<li class="catalog-item">
+					<h3><a href="catalog-item.html">Селфи-палка следуй за мной</a></h3>
+					<span>4900 руб.</span>
+					<p>
+						<img src="img/" width="" height="" alt="Селфи-палка следуй за мной">
+						<button>Добавить к сравнению</button><!--я думаю это кнопка -->
+						<button>В корзину</button>
+					</p>
+				</li>
+			</ul>
+
+			<ul class="pagination-list">
+				<li class="pagination-item"><a href="#">Назад</a></li>
+				<li class="pagination-item pagination-item-current"><a>1</a></li>
+				<li class="pagination-item"><a href="#">2</a></li>
+				<li class="pagination-item"><a href="#">3</a></li>
+				<li class="pagination-item"><a href="#">Вперед</a></li>
+			</ul>
+
+		</section>
+	</main>
+
+	<footer class="main-footer">
 		<a class="main-footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
   			<img src="img/" width="" height="" alt="Логотип магазина Девайс">
   		</a>
-  		
-  		<p class="location">
-  			г.Москва,ул.Строителей,15
-  		</p>
-  		
-  		<div class="footer-services">
-  			<ul class="footer-list">
-  				<li><a href="">Доставка</a></li>
-  				<li><a href="">Гарантия</a></li>
-  				<li><a href="">Контакты</a></li>
-  			</ul>
-  		</div>
-  		
-  		<div class="footer-social">
-  			<ul>
-         		<li><a class="social-button" href="#">Фейсбук</a></li>
-         		<li><a class="social-button" href="#">Инстаграм</a></li>
-          		<li><a class="social-button" href="#">Твитер</a></li>
-         		
-        	</ul>
-  		</div>
-  		
-  		<!--формы оставлю на потом-->
-  		
-  		<span>Тел: +7(495)495-95-95</span>
-  		
+
+		<p class="location">
+			г.Москва,ул.Строителей,15
+		</p>
+
+		<div class="footer-services">
+			<ul class="footer-list">
+				<li><a href="">Доставка</a></li>
+				<li><a href="">Гарантия</a></li>
+				<li><a href="">Контакты</a></li>
+			</ul>
+		</div>
+
+		<div class="footer-social">
+			<ul>
+				<li><a class="social-button" href="#">Фейсбук</a></li>
+				<li><a class="social-button" href="#">Инстаграм</a></li>
+				<li><a class="social-button" href="#">Твитер</a></li>
+
+			</ul>
+		</div>
+
+		<!--формы оставлю на потом-->
+
+		<span>Тел: +7(495)495-95-95</span>
+
 	</footer>
-    
+
 </body>
+
 </html>
