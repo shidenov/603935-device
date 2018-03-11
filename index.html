@@ -26,7 +26,7 @@
 			</ul>			
 			<ul class="site-navigation">
 				<li>
-					<a href="">Каталог товаров <span class="plus"><!--здесь будет плюс--></span></a>				
+					<a href="">Каталог товаров</a>				
 					<ul>
 						<li><a href="catalog.html#vr">Визуальная реальность</a></li>
 						<li><a href="catalog.html#sf">Моноподы для селфи</a></li>
@@ -47,61 +47,71 @@
 		<h1 class="visually-hidden">Магазин Девайс</h1>
 
 		<section class="slides">
-			<h2 class="visually-hidden">Лучшие товары</h2>		
-			<!--как слайдер сделать не знаю,может через радио батон-->	
+			<h2 class="visually-hidden">Лучшие товары</h2>			
 			<ul class="slides-list">
-				<li>
-					<img src="img/slider-1.png" width="384" height="486" alt="селфи-палка">
-					<b>Делай селфи как Бен Стиллер!</b>
-					<p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-					<a class="button" href="">Подробнее</a>
-					<input class="slider-radio" type="radio" name="radio-button" id="radio-button1" checked>
-					<table class="features">
-						<tr>
-							<td>8.5 м</td>
-							<td>5 кг</td>
-							<td>Карбон</td>
-						</tr>
-						<tr>
-							<td>Длина палки</td>
-							<td>Вес палки</td>
-							<td>Материал</td>
-						</tr>
-					</table>
+				<li>				
+					<input class="slider-radio" type="radio" name="slider-item" id="radio-button1" checked>
+					<article>
+						<img src="img/slider-1.png" width="384" height="486" alt="селфи-палка">
+						<b>Делай селфи как Бен Стиллер!</b>
+						<p>Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+						<a class="button" href="">Подробнее</a>
+						<table class="features">
+							<tr>
+								<td>8.5 м</td>
+								<td>5 кг</td>
+								<td>Карбон</td>
+							</tr>
+							<tr>
+								<td>Длина палки</td>
+								<td>Вес палки</td>
+								<td>Материал</td>
+							</tr>
+						</table>
+					</article>
+					
 				</li>
 				<li>
-					<img src="img/slider-2.png" width="345" height="485" alt="смарт часы">
-					<b>Худеем правильно!</b>
-					<p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
-					<a class="button" href="">Подробнее</a>
-					<input class="slider-radio" type="radio" name="radio-button" id="radio-button2">
-					<table class="features">
-						<tr>
-							<td>48 часов</td>
-						</tr>
-						<tr>
-							<td>Без подзарядки</td>
-						</tr>
-					</table>
+					<input class="slider-radio" type="radio" name="slider-item" id="radio-button2">
+					<article>
+						<img src="img/slider-2.png" width="345" height="485" alt="смарт часы">
+						<b>Худеем правильно!</b>
+						<p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
+						<a class="button" href="">Подробнее</a>					
+						<table class="features">
+							<tr>
+								<td>48 часов</td>
+							</tr>
+							<tr>
+								<td>Без подзарядки</td>
+							</tr>
+						</table>
+					</article>					
 				</li>
 				<li>
-					<img src="img/slider-3.png" width="526" height="334" alt="квадрокоптер">
-					<b>Порхает как бабочка,жалит как пчела!</b>
-					<p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
-					<a class="button" href="">Подробнее</a>
-					<input class="slider-radio" type="radio" name="radio-button" id="radio-button3">
-					<table class="features">
-						<tr>
-							<td>800 м</td>
-							<td>50 м</td>
-						</tr>
-						<tr>
-							<td>Дальность полета</td>
-							<td>Радиус поражения</td>
-						</tr>
-					</table>
+					<input class="slider-radio" type="radio" name="slider-item" id="radio-button3">
+					<article>
+						<img src="img/slider-3.png" width="526" height="334" alt="квадрокоптер">
+						<b>Порхает как бабочка,жалит как пчела!</b>
+						<p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
+						<a class="button" href="">Подробнее</a>					
+						<table class="features">
+							<tr>
+								<td>800 м</td>
+								<td>50 м</td>
+							</tr>
+							<tr>
+								<td>Дальность полета</td>
+								<td>Радиус поражения</td>
+							</tr>
+						</table>
+					</article>
+					
 				</li>
 			</ul>
+			<label for="radio-button1">Селфи-палка</label>
+			<label for="radio-button2">Смарт-часы</label>
+			<label for="radio-button3">Квадрокоптер</label>
 		</section>
 
 		<section class="goods-catalog">
