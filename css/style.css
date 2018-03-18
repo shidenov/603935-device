@@ -27,8 +27,10 @@
 }
 
 body {
+
 	margin: 0;
 	padding: 0;
+	padding-top: 40px;
 
 	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-weight: 700;
@@ -41,6 +43,24 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.content-wrapper {
+	width: 1200px;
+	padding: 0 20px;
+	box-sizing: border-box;
+	margin: 0 auto;
 }
 
 .button {
@@ -65,7 +85,22 @@ a {
 /*-----------------------------------------HEADER---------------------------------------------------*/
 
 .main-header {
+	min-height: 299px;
+	margin: 0 auto;
+
 	background-color: #f7e296;
+}
+
+.main-navigation {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.header-wrapper {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-around;
 }
 
 .main-header-logo {
@@ -74,7 +109,7 @@ a {
 	line-height: 48px;
 	text-transform: uppercase;
 	letter-spacing: 0.01em;
-	color:#000;
+	color: #000;
 }
 
 .main-header-logo:focus,
@@ -123,10 +158,15 @@ a {
 }
 
 .user-functions {
+	display: flex;
+
 	list-style: none;
 }
 
+
 .user-functions a {
+	margin-right: 30px;
+
 	font-size: 15px;
 	line-height: 30px;
 	font-family: "Open Sans Light", "Arial", sans-serif;
@@ -143,6 +183,9 @@ a {
 }
 
 .site-navigation {
+	display: flex;
+	justify-content: space-between;
+
 	list-style: none;
 }
 
@@ -188,6 +231,10 @@ a {
 
 /*-----------------------------------------MAIN---------------------------------------------------*/
 
+.slides {
+	margin-bottom: 106px;
+}
+
 .slides-list {
 	list-style: none;
 }
@@ -222,7 +269,15 @@ a {
 	color: #464646;
 }
 
+.goods-catalog {
+	margin-bottom: 183px;
+	/*решил отступ арям до блока взяьб.Так легче потом будет, чем если до декоративной палочки отступ брать*/
+}
+
 .goods-catalog-list {
+	display: flex;
+	justify-content: space-between;
+
 	list-style: none;
 }
 
@@ -241,16 +296,21 @@ a {
 }
 
 .services {
+	margin-bottom: 94px;
+
 	background-color: #e5e5e5;
+}
+
+.service-wrapper {
+	display: flex;
+	justify-content: space-between;
 }
 
 .button-list {
 	list-style: none;
 }
 
-.brand-list {
-	list-style: none;
-}
+
 
 .service-list {
 	list-style: none;
@@ -269,6 +329,31 @@ a {
 	line-height: 30px;
 	letter-spacing: 0.01em;
 	color: #464646;
+}
+
+.brands {
+	margin-bottom: 93px;
+}
+
+.brand-list {
+	display: flex;
+	justify-content: space-between;
+	/*выравнивание не получается как на макете*/
+	list-style: none;
+}
+
+.about-us-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 92px;
+}
+
+.about-us {
+	width: 475px;
+}
+
+.contacts {
+	width: 560px;
 }
 
 .about-us h2,
@@ -303,24 +388,48 @@ a {
 	letter-spacing: 0.2em;
 }
 
-.brand-item{
+.brand-item {
 	position: relative;
 }
-.brand-item img:first-child:hover {
-	display:none;
-}
+
 .brand-item img:last-child {
 	position: absolute;
 	top: 0;
-	left: 0;	
-	
-	opacity: 0;	
+	left: 0;
+
+	opacity: 0;
 }
-.brand-item img:last-child:hover {
+
+.brand-item:hover img:first-child {
+	opacity: 0;
+}
+
+.brand-item:hover img:last-child {
 	opacity: 1;
 }
 
+
 /*-----------------------------------------FOOTER---------------------------------------------------*/
+
+.main-footer {
+	min-height: 323px;
+}
+
+.footer-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-wrapper1 {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.footer-inner-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
 
 .main-footer {
 	background-color: #464646;
@@ -346,6 +455,53 @@ a {
 	opacity: 0.3;
 }
 
+.footer-user-navigation {
+	list-style: none;
+}
+
+.footer-user-navigation a {
+	font-size: 15px;
+	line-height: 30px;
+	font-family: "Open Sans Light", "Arial", sans-serif;
+	color: #fff;
+	opacity: 0.7;
+
+}
+
+.footer-user-functions {
+	display: flex;
+
+	list-style: none;
+}
+
+.footer-user-functions a {
+	margin-right: 30px;
+
+	font-size: 15px;
+	line-height: 30px;
+	font-family: "Open Sans Light", "Arial", sans-serif;
+	color: #fff;
+	opacity: 0.7;
+}
+
+.footer-user-navigation a:hover,
+.footer-user-navigation a:focus,
+.footer-user-functions a:hover,
+.footer-user-functions a:focus {
+	opacity: 1;
+}
+
+.footer-user-navigation a:active,
+.footer-user-functions a:active {
+	opacity: 0.3
+}
+
+.footer-wrapper2 {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
 .location {
 	font-family: "Open Sans Light", "Arial", sans-serif;
 	font-size: 15px;
@@ -353,6 +509,10 @@ a {
 }
 
 .footer-list {
+	width: 440px;
+	display: flex;
+	justify-content: space-between;
+
 	list-style: none;
 }
 
@@ -371,51 +531,24 @@ a {
 	opacity: 0.3;
 }
 
-.footer-social ul {
-	list-style: none;
-}
-
 .main-footer span {
 	font-family: "Open Sans Light", "Arial", sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 }
 
-.footer-user-navigation {
+.footer-wrapper3 {
+	display: flex;
+	justify-content: space-around;
+	/*заменю на маргины потом*/
+}
+
+.footer-social ul {
+	width: 240px;
+	display: flex;
+	justify-content: space-between;
+
 	list-style: none;
-}
-
-.footer-user-navigation a {
-	font-size: 15px;
-	line-height: 30px;
-	font-family: "Open Sans Light", "Arial", sans-serif;
-	color: #fff;
-	opacity: 0.7;
-
-}
-
-.footer-user-functions {
-	list-style: none;
-}
-
-.footer-user-functions a {
-	font-size: 15px;
-	line-height: 30px;
-	font-family: "Open Sans Light", "Arial", sans-serif;
-	color: #fff;
-	opacity: 0.7;
-}
-
-.footer-user-navigation a:hover,
-.footer-user-navigation a:focus,
-.footer-user-functions a:hover,
-.footer-user-functions a:focus {
-	opacity: 1;
-}
-
-.footer-user-navigation a:active,
-.footer-user-functions a:active {
-	opacity: 0.3
 }
 
 /*-----------------------------------------POP UP LOGIN---------------------------------------------------*/
@@ -438,12 +571,21 @@ a {
 .write-us textarea:hover {
 	background-color: #ebebeb;
 }
+
 .write-us input:focus,
-.write-us textarea:focus{
+.write-us textarea:focus {
 	background-color: #ffffff;
 	outline-color: #f7e296;
-}							
+}
 
+.write-us .invalid-field {
+	background-color: #f6dada;
+}
+
+.write-us .invalid-field:hover,
+.write-us .invalid-field:focus {
+	background-color: #f6dada;
+}
 
 /*-----------------------------------------CATALOG.HTML---------------------------------------------------*/
 
@@ -473,7 +615,7 @@ a {
 	border: none;
 }
 
-.filter-item label{
+.filter-item label {
 	font-family: "Open Sans Light", "Arial", sans-serif;
 	font-size: 14px;
 	line-height: 40px;
@@ -551,10 +693,11 @@ a {
 	text-transform: uppercase;
 	color: rgba(0, 0, 0, 0.3);
 }
+
 .pagination-item-current a,
 .item-prev a,
 .item-next a {
-	color:#000;
+	color: #000;
 }
 
 .item-prev a:hover,
