@@ -138,10 +138,14 @@ a {
 }
 
 .user-navigation {
+	display: flex;
+
 	list-style: none;
 }
 
 .user-navigation a {
+	margin-right: 30px;
+
 	font-size: 15px;
 	line-height: 30px;
 	font-family: "Open Sans Light", "Arial", sans-serif;
@@ -209,6 +213,9 @@ a {
 }
 
 .goods {
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
 }
 
@@ -456,6 +463,8 @@ a {
 }
 
 .footer-user-navigation {
+	display: flex;
+
 	list-style: none;
 }
 
@@ -466,6 +475,7 @@ a {
 	color: #fff;
 	opacity: 0.7;
 
+	margin-right: 30px;
 }
 
 .footer-user-functions {
@@ -553,9 +563,38 @@ a {
 
 /*-----------------------------------------POP UP LOGIN---------------------------------------------------*/
 
+.modal {
+	width: 960px;
+	min-height: 554px;
+	margin: 0 auto;
+}
+
 .write-us {
 	background-color: #fff;
+}
 
+.write-us .form-login {
+	width: 760px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+.modal-inner-wrapper {
+	width: 360px;
+}
+
+.textarea {
+	width: 760px;
+}
+
+.write-us input {
+	width: 360px;
+}
+
+.write-us textarea {
+	width: 760px;
 }
 
 .write-us input,
@@ -590,7 +629,15 @@ a {
 /*-----------------------------------------CATALOG.HTML---------------------------------------------------*/
 
 .breadcrumbs {
+	display: flex;
+	margin-bottom: 50px;
+	padding: 0;
+
 	list-style: none;
+}
+
+.breadcrumbs li {
+	margin-right: 30px;
 }
 
 .breadcrumbs a,
@@ -611,6 +658,74 @@ a {
 	color: rgba(0, 0, 0, 0.1);
 }
 
+/*flex*/
+
+.common-container {
+	display: flex;
+}
+
+.filters {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	align-items: flex-end;
+
+	background-color: #eeeeee;
+}
+
+.filter-title {
+	display: flex;
+	align-self: stretch;
+	justify-content: flex-end;
+
+	background-color: #dbdbdb;
+}
+
+.filter-title h2 {
+	width: 268px;
+}
+
+.form-filter {
+	width: 268px;
+}
+
+.big-wrapper {
+	flex-grow: 1;
+}
+
+.sorting-wrapper {
+	background-color: #ebebeb;
+}
+
+.sorting-inner {
+	display: flex;
+	align-items: baseline;
+	width: 852px;
+}
+
+.catalog-wrapper {
+	width: 852px;
+}
+
+.catalog-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.pagination-list {
+	display: flex;
+}
+
+/*flex*/
+
+.filters h2 {
+	font-family: "Gilroy Bold", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+
 .filters fieldset {
 	border: none;
 }
@@ -620,6 +735,14 @@ a {
 	font-size: 14px;
 	line-height: 40px;
 	letter-spacing: 0.01em;
+}
+
+.sorting h2 {
+	font-family: "Gilroy Bold", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
 }
 
 .sorting a {
@@ -661,7 +784,6 @@ a {
 .catalog-list .button-compare {
 	background-color: transparent;
 	border: none;
-
 
 	text-transform: none;
 	font-family: "Open Sans", "Arial", sans-serif;
