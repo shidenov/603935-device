@@ -30,7 +30,6 @@ body {
 
 	margin: 0;
 	padding: 0;
-	padding-top: 40px;
 
 	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-weight: 700;
@@ -143,9 +142,11 @@ a {
 	list-style: none;
 }
 
-.user-navigation a {
-	margin-right: 30px;
+.user-navigation li:first-child{
+	margin-right: 20px;
+}
 
+.user-navigation a {
 	font-size: 15px;
 	line-height: 30px;
 	font-family: "Open Sans Light", "Arial", sans-serif;
@@ -167,10 +168,10 @@ a {
 	list-style: none;
 }
 
-
+.user-functions li:first-child{
+	margin-right: 37px;
+}
 .user-functions a {
-	margin-right: 30px;
-
 	font-size: 15px;
 	line-height: 30px;
 	font-family: "Open Sans Light", "Arial", sans-serif;
@@ -277,8 +278,7 @@ a {
 }
 
 .goods-catalog {
-	margin-bottom: 183px;
-	/*решил отступ арям до блока взяьб.Так легче потом будет, чем если до декоративной палочки отступ брать*/
+	margin-bottom: 76px;
 }
 
 .goods-catalog-list {
@@ -313,7 +313,7 @@ a {
 	justify-content: space-between;
 }
 
-.button-list {
+.service-navigation {
 	list-style: none;
 }
 
@@ -345,7 +345,9 @@ a {
 .brand-list {
 	display: flex;
 	justify-content: space-between;
-	/*выравнивание не получается как на макете*/
+	margin: 0;
+	padding: 0;
+	
 	list-style: none;
 }
 
@@ -418,22 +420,13 @@ a {
 
 /*-----------------------------------------FOOTER---------------------------------------------------*/
 
-.main-footer {
-	min-height: 323px;
-}
-
-.footer-wrapper {
-	display: flex;
-	flex-direction: column;
-}
-
-.footer-wrapper1 {
+.footer-row {
 	display: flex;
 	justify-content: space-between;
-
+	align-items: center;
 }
 
-.footer-inner-wrapper {
+.footer-user-nav-wrapper {
 	display: flex;
 	justify-content: space-between;
 }
@@ -467,6 +460,9 @@ a {
 
 	list-style: none;
 }
+.footer-user-navigation li:first-child{
+	margin-right: 44px;
+}
 
 .footer-user-navigation a {
 	font-size: 15px;
@@ -482,6 +478,9 @@ a {
 	display: flex;
 
 	list-style: none;
+}
+.footer-user-functions li:first-child{
+	margin-right: 37px;
 }
 
 .footer-user-functions a {
@@ -658,9 +657,9 @@ a {
 	color: rgba(0, 0, 0, 0.1);
 }
 
-/*flex*/
+/*--------------flex---------------*/
 
-.common-container {
+.catalog-container {
 	display: flex;
 }
 
@@ -682,14 +681,19 @@ a {
 }
 
 .filter-title h2 {
-	width: 268px;
+	width: 348px;
+	padding-left: 80px;
+	box-sizing: border-box;
 }
 
 .form-filter {
-	width: 268px;
+	width: 348px;
+	padding-left: 80px;
+	padding-right: 68px;
+	box-sizing: border-box;
 }
 
-.big-wrapper {
+.catalog-main-wrapper {
 	flex-grow: 1;
 }
 
@@ -701,25 +705,32 @@ a {
 	display: flex;
 	align-items: baseline;
 	width: 852px;
+	padding-left: 72px;
+	padding-right: 20px;
+	box-sizing: border-box;
 }
 
 .catalog-wrapper {
 	width: 852px;
+	padding-right: 20px;
+	padding-left: 72px;
+	box-sizing: border-box;
 }
 
 .catalog-list {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
 }
 
 .pagination-list {
 	display: flex;
 }
 
-/*flex*/
+/*-----------flex-----------*/
 
 .filters h2 {
-	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.2em;
@@ -728,6 +739,8 @@ a {
 
 .filters fieldset {
 	border: none;
+	margin: 0;
+	padding: 0;
 }
 
 .filter-item label {
@@ -738,7 +751,6 @@ a {
 }
 
 .sorting h2 {
-	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.2em;
