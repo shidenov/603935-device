@@ -18,8 +18,10 @@
 				</a>
 				<div class="header-wrapper">
 					<form class="header-form" action="https://echo.htmlacademy.ru">
-						<input type="search" id="header-form-search" name="search" placeholder="Поиск по сайту">
 						<label class="visually-hidden" for="header-form-search">Поиск по сайту</label>
+						<input type="search" id="header-form-search" name="search" placeholder="Поиск по сайту">
+						<button class="header-form-submit" type="submit" >Найти</button>
+						
 					</form>
 					<ul class="user-navigation">
 						<li><a class="login-link"href="login.html">Войти</a></li>
@@ -61,7 +63,7 @@
 			<section class="slides">
 				<h2 class="visually-hidden">Лучшие товары</h2>
 				<ul class="slides-list">
-					<li class="first-slide">
+					<li>
 						<div class="slider-img">
 							<img src="img/slider-1.png" width="384" height="486" alt="селфи-палка">
 						</div>
@@ -85,37 +87,42 @@
 					</li>
 					
 					<li>
-						<img src="img/slider-2.png" width="345" height="485" alt="смарт часы">
-						<b>Худеем правильно!</b>
-						<p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
-						<a class="button" href="">Подробнее</a>
-						<table class="features">
-							<tr>
-								<td>48 часов</td>
-							</tr>
-							<tr>
-								<td>Без подзарядки</td>
-							</tr>
-						</table>
-
+						<div class="slider-img">
+							<img src="img/slider-2.png" width="345" height="485" alt="смарт часы">
+						</div>
+						<div class="slide-description">
+							<b>Худеем правильно!</b>
+							<p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
+							<a class="button" href="">Подробнее</a>
+							<table class="features">
+								<tr>
+									<td>48 часов</td>
+								</tr>
+								<tr>
+									<td>Без подзарядки</td>
+								</tr>
+							</table>
+						</div>
 					</li>
 					<li>
-
-						<img src="img/slider-3.png" width="526" height="334" alt="квадрокоптер">
-						<b>Порхает как бабочка,жалит как пчела!</b>
-						<p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
-						<a class="button" href="">Подробнее</a>
-						<table class="features">
-							<tr>
-								<td>800 м</td>
-								<td>50 м</td>
-							</tr>
-							<tr>
-								<td>Дальность полета</td>
-								<td>Радиус поражения</td>
-							</tr>
-						</table>
-
+						<div class="slider-img">
+							<img src="img/slider-3.png" width="526" height="334" alt="квадрокоптер">
+						</div>
+						<div class="slide-description">
+							<b>Порхает как бабочка,жалит как пчела!</b>
+							<p>Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
+							<a class="button" href="">Подробнее</a>
+							<table class="features">
+								<tr>
+									<td>800 м</td>
+									<td>50 м</td>
+								</tr>
+								<tr>
+									<td>Дальность полета</td>
+									<td>Радиус поражения</td>
+								</tr>
+							</table>
+						</div>
 					</li>
 				</ul>
 				<button class="dot">Селфи-палка</button>
@@ -124,35 +131,31 @@
 			</section>
 
 
+
 			<section class="goods-catalog">
 				<h2 class="visually-hidden">Категории</h2>
 				<ul class="goods-catalog-list">
-					<li>
-						<a class="good-img first-img" href=""></a>
-						<a href="">Виртуальная реальность</a>
+					<li>					
+						<a class="good-image vr-image" href="">Виртуальная реальность</a>
 					</li>
 					<li>
-						<a class="good-img second-img" href=""></a>
-						<a href="">Моноподы<br> для селфи</a>
+						<a class="good-image selfie-image" href="">Моноподы для селфи</a>
 					</li>
 					<li>
-						<a class="good-img third-img" href=""></a>
-						<a href="">Экшн-камеры</a>
+						<a class="good-image camera-image" href="">Экшн-камеры</a>
 					</li>
 					<li>
-						<a class="good-img fourth-img" href=""></a>
-						<a href="">Фитнес-браслеты</a>
+						<a class="good-image bracer-image" href="">Фитнес-браслеты</a>
 					</li>
 					<li>
-						<a class="good-img fifth-img" href=""></a>
-						<a href="">Умные часы</a>
+						<a class="good-image watch-image"  href="">Умные часы</a>
 					</li>
 					<li>
-						<a class="good-img sixth-img" href=""></a>
-						<a href="">Квадрокоптеры</a>
+						<a class="good-image quadrupter-image" href="">Квадрокоптеры</a>
 					</li>
 				</ul>
 			</section>
+			
 		</div>
 
 		<section class="services">
@@ -238,7 +241,7 @@
 				</a>
 				<div class="footer-user-nav-wrapper">
 					<ul class="footer-user-navigation">
-						<li><a class="login-link footer-login-link" href="">Войти</a></li>
+						<li><a class="login-link footer-login-link" href="">Войти</a></li>						
 					</ul>
 
 					<ul class="footer-user-functions">
