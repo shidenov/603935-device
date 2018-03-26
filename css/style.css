@@ -986,11 +986,17 @@ input[type="radio"].visually-hidden {
 .footer-user-navigation {
 	display: flex;
 	margin: 0;
-	margin-right: 40px;
+	margin-right: 17px;
 	padding: 0;
 
 	list-style: none;
 }
+
+
+.main-footer-inner .footer-user-navigation {
+	margin-right: 40px;
+}
+
 
 .footer-user-navigation li:first-child {
 	margin-right: 23px;
