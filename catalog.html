@@ -94,19 +94,19 @@
 						<legend>Цвет</legend>
 						<ul>
 							<li class="filter-option">
-								<input class="visually-hidden filter-input-checkbox filter-input-checkbox-checked" id="color-input-black" name="color-black" type="checkbox" checked>
+								<input class="visually-hidden filter-input-checkbox" id="color-input-black" name="color-black" type="checkbox" checked disabled>
 								<label for="color-input-black">Черный</label>
 							</li>
 							<li class="filter-option">
-								<input class="visually-hidden filter-input-checkbox" id="color-input-white" name="color-white" type="checkbox">
+								<input class="visually-hidden filter-input-checkbox" id="color-input-white" name="color-white" type="checkbox" >
 								<label for="color-input-white">Белый</label>
 							</li>
 							<li class="filter-option">
-								<input class="visually-hidden filter-input-checkbox filter-input-checkbox-checked" id="color-input-blue" name="color-blue" type="checkbox" checked>
+								<input class="visually-hidden filter-input-checkbox " id="color-input-blue" name="color-blue" type="checkbox" checked>
 								<label for="color-input-blue">Синий</label>
 							</li>
 							<li class="filter-option">
-								<input class="visually-hidden filter-input-checkbox filter-input-checkbox-checked" id="color-input-red" name="color-red" type="checkbox" checked>
+								<input class="visually-hidden filter-input-checkbox " id="color-input-red" name="color-red" type="checkbox" checked>
 								<label for="color-input-red">Красный</label>
 							</li>
 							<li class="filter-option">
@@ -120,7 +120,7 @@
 						<legend>Bluetooth</legend>
 						<ul>
 							<li class="filter-option">
-								<input class="visually-hidden filter-input-radio filter-input-radio-checked" id="bluetooth-yes" type="radio" name="bluetooth-group" value="yes" checked="">
+								<input class="visually-hidden filter-input-radio" id="bluetooth-yes" type="radio" name="bluetooth-group" value="yes" checked>
 								<label for="bluetooth-yes">Есть</label>
 							</li>
 							<li class="filter-option">
@@ -141,12 +141,13 @@
 					<section class="sorting">
 						<div class="sorting-inner">
 							<h2>Сортировка:</h2>
-							<a href="">По цене</a>
+							
+							<a class="sorting-item-current" href="">По цене</a>
 							<a href="">По типу</a>
 							<a href="">По популярности</a>
-
-							<a class="arrow-up" href=""><span class="visually-hidden">По возрастанию</span></a>
-							<a class="arrow-down" href=""><span class="visually-hidden">По убыванию</span></a>
+						
+							<a class="arrow-up " href=""><span class="visually-hidden">По возрастанию</span></a>
+							<a class="arrow-down sorting-item-current" href=""><span class="visually-hidden">По убыванию</span></a>
 						</div>
 					</section>
 				</div>
@@ -157,48 +158,57 @@
 						<h2 class="visually-hidden">Список моноподов</h2>
 						<ul class="catalog-list">
 							<li class="catalog-item">					
-								<div class="catalog-item-hover">
-									<!--я думаю это кнопка -->
-									<button class="button">В корзину</button>
-									<button class="button-compare">Добавить к сравнению</button>
+								<div class="example">
+									<img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+									<div class="catalog-item-hover">
+										<!--я думаю это кнопка -->
+										<button class="button button-basket">В корзину</button>
+										<button class="button-compare">Добавить к сравнению</button>
+									</div>
 								</div>
-								<img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+								
 								<div class="catalog-item-description">
 									<h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
 									<span class="good-price">500 руб.</span>
 								</div>
 							</li>
-							<li class="catalog-item">								
-								<div class="catalog-item-hover">
-									<!--я думаю это кнопка -->
-									<button class="button">В корзину</button>
-									<button class="button-compare">Добавить к сравнению</button>
+							<li class="catalog-item">	
+								<div class="example">							
+									<div class="catalog-item-hover">
+										<!--я думаю это кнопка -->
+										<button class="button button-basket">В корзину</button>
+										<button class="button-compare">Добавить к сравнению</button>
+									</div>
+									<img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная сселфи-палка">
 								</div>
-								<img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная сселфи-палка">
 								<div class="catalog-item-description">
 									<h3><a href="catalog-item.html">Профессиональная селфи-палка<!--вот здесь слово селфи-палка надо сделать чтоб не переносилось на дргуую строку--></a></h3>
 									<span class="good-price">1500 руб.</span>
 								</div>
 							</li>
-							<li class="catalog-item">								
-								<div class="catalog-item-hover">
-									<!--я думаю это кнопка -->
-									<button class="button">В корзину</button>
-									<button class="button-compare">Добавить к сравнению</button>
+							<li class="catalog-item">	
+								<div class="example">								
+									<div class="catalog-item-hover">
+										<!--я думаю это кнопка -->
+										<button class="button button-basket">В корзину</button>
+										<button class="button-compare">Добавить к сравнению</button>
+									</div>
+									<img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
 								</div>
-								<img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
 								<div class="catalog-item-description">
 									<h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
 									<span class="good-price">2500 руб.</span>
 								</div>
 							</li>
-							<li class="catalog-item">								
-								<div class="catalog-item-hover">
-									<!--я думаю это кнопка -->
-									<button class="button">В корзину</button>
-									<button class="button-compare">Добавить к сравнению</button>
+							<li class="catalog-item new">	
+								<div class="example">								
+									<div class="catalog-item-hover">
+										<!--я думаю это кнопка -->
+										<button class="button button-basket">В корзину</button>
+										<button class="button-compare">Добавить к сравнению</button>
+									</div>
+									<img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка следуй за мной">
 								</div>
-								<img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка следуй за мной">
 								<div class="catalog-item-description">
 									<h3><a href="catalog-item.html">Селфи-палка «Следуй за мной»</a></h3>
 									<span class="good-price">4900 руб.</span>
@@ -267,7 +277,9 @@
 					</ul>
 			
 
-				<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg-device/logo-html.svg" width="27" height="35" alt="логотип академии"></a>
+				<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+					<img src="img/svg-device/logo-html.svg" width="27" height="35" alt="логотип академии">
+				</a>
 			</div>
 		</div>
 	</footer>
