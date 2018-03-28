@@ -188,13 +188,15 @@ input[type="radio"].visually-hidden {
 	border-bottom: 2px solid #000;
 }
 
+
+
 .header-form-submit {
 	width: 84px;
 	min-height: 49px;
 	margin-left: -5px;
 	box-sizing: border-box;
 
-	visibility: visible;
+	visibility: hidden;
 	border: 2px solid #000;
 	background-color: transparent;
 
@@ -203,7 +205,17 @@ input[type="radio"].visually-hidden {
 	line-height: 30px;
 	letter-spacing: 0.01em;
 }
-
+.header-form-submit:hover {
+	background-color: #000;
+	color:#fff;
+}
+.header-form-submit:active {
+	background-color: #000;
+	color: rgba(255,255,255,0.3);
+}
+.header-form input:focus + .header-form-submit {
+	visibility: visible;
+} 
 
 
 .user-navigation {
@@ -390,7 +402,7 @@ input[type="radio"].visually-hidden {
 	z-index: 1;
 
 
-	display: none;
+	display: flex;
 	width: 1160px;
 	padding: 0;
 	padding-left: 60px;
@@ -400,6 +412,10 @@ input[type="radio"].visually-hidden {
 
 	list-style: none;
 	background-color: #f7e296;
+	visibility: hidden;
+}
+.site-navigation > li:first-child:hover .goods {
+	visibility: visible;
 }
 
 .goods li {
@@ -423,6 +439,8 @@ input[type="radio"].visually-hidden {
 	letter-spacing: 0.01em;
 }
 
+
+
 .goods a:hover,
 .goods a:focus {
 	opacity: 0.6;
@@ -435,7 +453,9 @@ input[type="radio"].visually-hidden {
 /*-----------------------------------------MAIN---------------------------------------------------*/
 
 .slides {
-	margin-bottom: 73px;
+	position: relative;
+	
+	margin-bottom: 98px;
 }
 
 .slides-list {
@@ -598,6 +618,45 @@ input[type="radio"].visually-hidden {
 
 .features td:nth-child(3) {
 	width: 66px;
+}
+
+.slider-buttons {
+	position: absolute;
+	bottom: 149px;
+	right: 83px;
+}
+
+.slider-buttons .dot {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 16px;
+	padding: 0;
+	box-sizing: border-box;
+	
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 100%;
+	
+}
+
+.dot-current::before {
+	content: "";
+	position: absolute;
+	
+	width: 6px;
+	height: 6px;
+	margin-left: -3px;
+	margin-top: -3px;
+	box-sizing: border-box;
+	
+	border-radius: 100%;
+	border: 1px solid #000;
+	
+}
+
+.slider-buttons .dot:last-child {
+	margin-right: 0;
 }
 
 /*Потом уберу*/
@@ -771,8 +830,21 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 24px;
 }
 
-.service-navigation .button {
+.service-navigation span {
+	display: inline-block;
 	width: 160px;
+	
+	text-align: center;
+}
+.service-navigation .button {
+	text-align: left;
+}
+.service-navigation .button:hover {
+	width: 100%;
+	
+	background: none;
+	background-color: #000;
+	color: #f7e184;
 }
 
 .service-list {
@@ -1017,7 +1089,6 @@ input[type="radio"].visually-hidden {
 
 
 	text-transform: uppercase;
-	color: #000;
 	letter-spacing: 0.2em;
 }
 
@@ -1240,6 +1311,8 @@ input[type="radio"].visually-hidden {
 	position: relative;
 
 	padding-left: 32px;
+	
+	opacity: 0.3;
 }
 
 
@@ -1252,7 +1325,6 @@ input[type="radio"].visually-hidden {
 	width: 32px;
 	height: 32px;
 
-	opacity: 0.3;
 	content: "";
 }
 
@@ -1265,7 +1337,6 @@ input[type="radio"].visually-hidden {
 	width: 32px;
 	height: 32px;
 
-	opacity: 0.3;
 	content: "";
 }
 
@@ -1278,9 +1349,15 @@ input[type="radio"].visually-hidden {
 	width: 32px;
 	height: 32px;
 
-	opacity: 0.3;
 	content: "";
 }
+.social-button:hover {
+	opacity: 1;
+}
+.social-button:active {
+	opacity: 0.1;
+}
+
 
 .footer-bottom .academy-logo {
 	display: block;
@@ -1295,37 +1372,103 @@ input[type="radio"].visually-hidden {
 /*-----------------------------------------POP UP LOGIN---------------------------------------------------*/
 
 .modal {
+	position: fixed;
+	
+	display: none;	
 	width: 960px;
-	min-height: 554px;
+	padding: 96px 100px 88px;
 	margin: 0 auto;
-}
-
-.write-us {
+	
 	background-color: #fff;
+	box-shadow: 0px 10px 20px 5px rgba(0,0,0,0.2);
 }
-
+.modal p{
+	margin: 0;
+}
+.write-us {
+	top: 50%;
+	left: 50%;
+	box-sizing: border-box;
+	
+	transform: translate(-50%,-50%);
+}
 .write-us .form-login {
-	width: 760px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-between;	
 	margin: 0 auto;
+	
 }
 
 .modal-inner-wrapper {
 	width: 360px;
 }
 
-.textarea {
-	width: 760px;
+.write-us input,
+.write-us textarea{	
+	margin: 9px 0 33px 0;
+	padding: 17px 0 18px 20px;
+	box-sizing: border-box;
+	
+	border: none; 
 }
-
 .write-us input {
-	width: 360px;
+	width: 360px;	
 }
-
 .write-us textarea {
 	width: 760px;
+	min-height: 154px;
+	margin-bottom: 35px;
+}
+
+.modal-close {
+	content: "";
+	
+	position: absolute;
+	top:22px;
+	right: 22px;
+	
+	width: 54px;
+	height: 54px;
+	
+	font-size: 14px;
+	line-height: 19px;
+	text-align: center;
+	color: rgba(0,0,0,0.2);
+	letter-spacing: 0.01em;
+	
+	border: none;
+	outline: none;
+	border-radius: 50%;
+	background-color: #f7e296;
+	cursor: pointer;
+}
+.modal-close::before,
+.modal-close::after 
+{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	
+	width: 32px;
+	height: 2px;
+	
+	background-color: #fff;
+}
+.modal-close::before {
+	transform: translateX(-50%) rotate(-45deg);
+}
+.modal-close::after {
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.modal-close:hover,
+.modal-close:focus{
+	background-color: #f0c52e;
+}
+.modal-close:active {
+	background-color: #faedc0;
 }
 
 .write-us input,
@@ -1356,7 +1499,12 @@ input[type="radio"].visually-hidden {
 .write-us .invalid-field:focus {
 	background-color: #f6dada;
 }
-
+.form-login button {
+	background-color: transparent;
+	
+	width: 200px;
+	padding: 10px 0 9px;
+}
 /*-----------------------------------------CATALOG.HTML---------------------------------------------------*/
 
 .main-header-inner {
@@ -1508,10 +1656,6 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 }
 
-.pagination-list {
-	display: flex;
-}
-
 /*-----------flex-----------*/
 
 .filters fieldset {
@@ -1565,7 +1709,7 @@ input[type="radio"].visually-hidden {
 	top: -10px;
 	width: 4px;
 	height: 4px;
-	background-color: #eee;
+	background-color: #ababab;
 	border: 8px solid #fff;
 	border-radius: 50%;
 	cursor: pointer;
@@ -1579,28 +1723,30 @@ input[type="radio"].visually-hidden {
 	left: 110px;
 }
 
-.selected-price {
-	margin-top: 9px;
-	padding-bottom: 4px;
+.price-controls {
+	margin-top: 1px;
 
 	font-family: "Gilroy Light", "Arial", sans-serif;
 	color: rgba(0, 0, 0, 0.2);
 	font-size: 14px;
 	line-height: 22px;
 }
-
-.selected-price span:first-child {
-	margin-right: 60px;
+.price-controls  label {
+	display: inline-block;
+	width: 43%;
 }
 
+
+
+
 .filter-item:first-child {
-	margin-bottom: 32px;
+	margin-bottom: 26px;
 }
 
 .filter-input-checkbox + label::before {
 	content: "";
 	margin-top: 9px;
-	margin-right: 11px;
+	padding-right: 11px;
 	width: 27px;
 	height: 23px;
 	float: left;
@@ -1612,9 +1758,7 @@ input[type="radio"].visually-hidden {
 .filter-input-checkbox:checked + label::before {
 	content: "";
 	margin-top: 9px;
-	margin-right: 11px;
-	width: 27px;
-	height: 23px;
+	padding-right: 11px;
 	float: left;
 	background-image: url(../img/svg-device/checkbox-on.svg);
 	background-repeat: no-repeat;
@@ -1624,7 +1768,9 @@ input[type="radio"].visually-hidden {
 .filter-input-checkbox:checked + label:hover::before,
 .filter-input-checkbox:checked + label:hover,
 .filter-input-checkbox + label:hover::before,
-.filter-input-checkbox + label:hover {
+.filter-input-checkbox + label:hover,
+.filter-input-checkbox:focus + label::before,
+.filter-input-checkbox:focus + label {
 	opacity: 0.6;
 }
 
@@ -1654,7 +1800,7 @@ input[type="radio"].visually-hidden {
 	width: 25px;
 	height: 25px;
 	margin-top: 7px;
-	margin-right: 13px;
+	padding-right: 13px;
 	float: left;
 	background-image: url("../img/svg-device/radio-off.svg");
 	background-repeat: no-repeat;
@@ -1663,10 +1809,8 @@ input[type="radio"].visually-hidden {
 
 .filter-input-radio:checked + label::before {
 	content: "";
-	width: 25px;
-	height: 25px;
 	margin-top: 7px;
-	margin-right: 13px;
+	padding-right: 13px;
 	float: left;
 	background-image: url("../img/svg-device/radio-on.svg");
 	background-repeat: no-repeat;
@@ -1676,7 +1820,9 @@ input[type="radio"].visually-hidden {
 .filter-input-radio + label:hover::before,
 .filter-input-radio:checked + label:hover::before,
 .filter-input-radio + label:hover,
-.filter-input-radio:checked + label:hover {
+.filter-input-radio:checked + label:hover,
+.filter-input-radio:focus + label::before,
+.filter-input-radio:focus + label {
 	opacity: 0.6;
 }
 
@@ -1812,7 +1958,7 @@ input[type="radio"].visually-hidden {
 	width: 260px;
 }
 
-.example {
+.item-hover-wrapper {
 	position: relative;
 	width: 360px;
 	height: 380px;
@@ -1916,38 +2062,46 @@ input[type="radio"].visually-hidden {
 
 
 .pagination-list {
+	display: flex;
+	align-items: center;
 	margin: 0;
 	padding: 0;
-	padding-left: 31px;
-	padding-top: 22px;
-	padding-bottom: 23px;
-	padding-right: 27px;
-
+	
 	list-style: none;
 	background-color: #ebebeb;
 }
-
+.pagination-item {
+	min-width: 39px;
+	text-align: center;
+}
+.pagination-list .item-prev a,
+.pagination-list .item-next a{
+	display: inline-block;
+	min-width: 137px;
+	padding-top:23px;
+	padding-bottom: 23px;
+	
+	
+	box-sizing: border-box;
+}
+.pagination-list .item-prev a {
+	padding-left: 30px;
+	padding-right: 29px;
+}
+.pagination-list .item-next a {
+	padding-left:  32px;
+	padding-right: 28px;
+}
 .pagination-list .item-prev {
 	margin-right: auto;
+	text-align: left;
 }
-
 .pagination-list .item-next {
 	margin-left: auto;
+	text-align: right;
 }
 
-.pagination-item:nth-child(2) {
-	padding-right: 30px;
-}
-
-.pagination-item:nth-child(3) {
-	padding-right: 25px;
-}
-
-.pagination-item:nth-last-child(2) {
-	padding: 0;
-}
-
-.pagination-list a {
+.pagination-list a {	
 	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 24px;

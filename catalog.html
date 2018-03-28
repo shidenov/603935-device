@@ -37,15 +37,15 @@
 						<a class="site-navigation-catalog" href="">Каталог товаров</a>
 						<ul class="goods">
 							<li>
-								<a href="catalog.html#vr">Виртуальная реальность</a>
-								<a href="catalog.html#sf">Моноподы для селфи</a>
-								<a href="catalog.html#ac">Экшн-камеры</a>
+								<a href="#vr">Виртуальная реальность</a>
+								<a href="">Моноподы для селфи</a>
+								<a href="#ac">Экшн-камеры</a>
 							</li>						
 							<li>
-								<a href="catalog.html#fb">Фитнес-браслеты</a>
-								<a href="catalog.html#sw">Умные часы</a>
+								<a href="#fb">Фитнес-браслеты</a>
+								<a href="#sw">Умные часы</a>
 							</li>					
-							<li><a href="catalog.html#kv">Квадрокоптеры</a></li>
+							<li><a href="#kv">Квадрокоптеры</a></li>
 						</ul>
 					</li>
 					<li ><a href="delivery.html">Доставка</a></li>
@@ -84,9 +84,13 @@
 							<div class="toggle toggle-min"></div>
 							<div class="toggle toggle-max"></div>
 						</div>
-						<div class="selected-price">
-							<span>от 0</span>
-							<span>до 5000</span>
+						<div class="price-controls">
+							<label class="min-price">
+								от 0								
+							</label>
+							<label max-price>
+								до 5000								
+							</label>
 						</div>
 					</fieldset>
 
@@ -158,7 +162,7 @@
 						<h2 class="visually-hidden">Список моноподов</h2>
 						<ul class="catalog-list">
 							<li class="catalog-item">					
-								<div class="example">
+								<div class="item-hover-wrapper">
 									<img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
 									<div class="catalog-item-hover">
 										<!--я думаю это кнопка -->
@@ -168,12 +172,12 @@
 								</div>
 								
 								<div class="catalog-item-description">
-									<h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
+									<h3><a href="catalog-item.html">Любительская селфи&#8209;палка</a></h3>
 									<span class="good-price">500 руб.</span>
 								</div>
 							</li>
 							<li class="catalog-item">	
-								<div class="example">							
+								<div class="item-hover-wrapper">							
 									<div class="catalog-item-hover">
 										<!--я думаю это кнопка -->
 										<button class="button button-basket">В корзину</button>
@@ -182,12 +186,12 @@
 									<img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная сселфи-палка">
 								</div>
 								<div class="catalog-item-description">
-									<h3><a href="catalog-item.html">Профессиональная селфи-палка<!--вот здесь слово селфи-палка надо сделать чтоб не переносилось на дргуую строку--></a></h3>
+									<h3><a href="catalog-item.html">Профессиональная селфи&#8209;палка<!--вот здесь слово селфи-палка надо сделать чтоб не переносилось на дргуую строку--></a></h3>
 									<span class="good-price">1500 руб.</span>
 								</div>
 							</li>
 							<li class="catalog-item">	
-								<div class="example">								
+								<div class="item-hover-wrapper">								
 									<div class="catalog-item-hover">
 										<!--я думаю это кнопка -->
 										<button class="button button-basket">В корзину</button>
@@ -196,12 +200,12 @@
 									<img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
 								</div>
 								<div class="catalog-item-description">
-									<h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
+									<h3><a href="catalog-item.html">Непотопляемая селфи&#8209;палка</a></h3>
 									<span class="good-price">2500 руб.</span>
 								</div>
 							</li>
 							<li class="catalog-item new">	
-								<div class="example">								
+								<div class="item-hover-wrapper">								
 									<div class="catalog-item-hover">
 										<!--я думаю это кнопка -->
 										<button class="button button-basket">В корзину</button>
@@ -210,7 +214,7 @@
 									<img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка следуй за мной">
 								</div>
 								<div class="catalog-item-description">
-									<h3><a href="catalog-item.html">Селфи-палка «Следуй за мной»</a></h3>
+									<h3><a href="catalog-item.html">Селфи&#8209;палка «Следуй за мной»</a></h3>
 									<span class="good-price">4900 руб.</span>
 								</div>
 							</li>
@@ -278,7 +282,8 @@
 			
 
 				<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="img/svg-device/logo-html.svg" width="27" height="35" alt="логотип академии">
+					<img src="img/svg-device/logo-html.svg" width="27" height="35" alt="html academy">
+					<span class=visually-hidden>html academy</span>
 				</a>
 			</div>
 		</div>

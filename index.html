@@ -35,15 +35,15 @@
 						<a class="site-navigation-catalog" href="">Каталог товаров</a>
 						<ul class="goods">
 							<li>
-								<a href="catalog.html#vr">Виртуальная реальность</a>
-								<a href="catalog.html#sf">Моноподы для селфи</a>
-								<a href="catalog.html#ac">Экшн-камеры</a>
+								<a href="#vr">Виртуальная реальность</a>
+								<a href="catalog.html">Моноподы для селфи</a>
+								<a href="#ac">Экшн-камеры</a>
 							</li>						
 							<li>
-								<a href="catalog.html#fb">Фитнес-браслеты</a>
-								<a href="catalog.html#sw">Умные часы</a>
+								<a href="#fb">Фитнес-браслеты</a>
+								<a href="#sw">Умные часы</a>
 							</li>					
-							<li><a href="catalog.html#kv">Квадрокоптеры</a></li>
+							<li><a href="#kv">Квадрокоптеры</a></li>
 						</ul>
 					</li>
 					<li ><a href="delivery.html">Доставка</a></li>
@@ -124,9 +124,11 @@
 						</div>
 					</li>
 				</ul>
-				<button class="dot">Селфи-палка</button>
-				<button class="dot">Смарт-часы</button>
-				<button class="dot">Квадракоптер</button>
+				<div class="slider-buttons">
+					<button class="dot dot-current"></button>
+					<button class="dot"></button>
+					<button class="dot"></button>
+				</div>				
 			</section>
 
 
@@ -138,7 +140,7 @@
 						<a class="good-image vr-image" href="">Виртуальная реальность</a>
 					</li>
 					<li>
-						<a class="good-image selfie-image" href="">Моноподы для&nbsp;селфи</a>
+						<a class="good-image selfie-image" href="catalog.html">Моноподы для&nbsp;селфи</a>
 					</li>
 					<li>
 						<a class="good-image camera-image" href="">Экшн-камеры</a>
@@ -161,20 +163,20 @@
 			<div class="content-wrapper service-wrapper">
 				<h2 class="visually-hidden">Услуги</h2>
 				<ul class="service-navigation">
-					<li><a class="button" href="#delivery">Доставка</a></li>
-					<li><a class="button" href="#guarantee">Гарантия</a></li>
-					<li><a class="button" href="#credit">Кредит</a></li>
+					<li><a class="button" ><span>Доставка</span></a></li>
+					<li><a class="button" ><span>Гарантия</span></a></li>
+					<li><a class="button" ><span>Кредит</span></a></li>
 				</ul>
 				<ul class="service-list">
-					<li class="service-item service-item-delivery " id="delivery">
+					<li class="service-item service-item-delivery ">
 						<h3>Доставка</h3>
 						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 					</li>
-					<li class="service-item service-item-guarantee" id="guarantee">
+					<li class="service-item service-item-guarantee">
 						<h3>Гарантия</h3>
 						<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
 					</li>
-					<li class="service-item service-item-credit" id="credit">
+					<li class="service-item service-item-credit">
 						<h3>Кредит</h3>
 						<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
 					</li>
@@ -274,7 +276,10 @@
 					</ul>
 			
 
-				<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/svg-device/logo-html.svg" width="27" height="35" alt="логотип академии"></a>
+				<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+					<img src="img/svg-device/logo-html.svg" width="27" height="35" alt="html academy">
+					<span class=visually-hidden>html academy</span>   
+				</a>
 			</div>
 		</div>
 	</footer>
@@ -293,11 +298,11 @@
 			</p>
 			<p class="textarea">
 				<label for="user-comment">Текст письма</label>
-				<textarea class="login-icon-comment" name="user-comment" id="user-comment" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+				<textarea class="login-icon-comment" name="user-comment" id="user-comment" cols="30" placeholder="В свободной форме"></textarea>
 			</p>
 			<button class="button" type="submit">Отправить</button>			
 		</form>
-		<button class="modal-close" type="button">Закрыть</button>
+		<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
 	</section>
 	
 	
