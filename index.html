@@ -163,7 +163,7 @@
 			<div class="content-wrapper service-wrapper">
 				<h2 class="visually-hidden">Услуги</h2>
 				<ul class="service-navigation">
-					<li><a class="button" href="#service-item-delivery"><span>Доставка</span></a></li>
+					<li><a class="button button-active" href="#service-item-delivery"><span>Доставка</span></a></li>
 					<li><a class="button" href="#service-item-guarantee"><span>Гарантия</span></a></li>
 					<li><a class="button" href="#service-item-credit"><span>Кредит</span></a></li>
 				</ul>
@@ -210,7 +210,7 @@
 		<div class="content-wrapper about-us-wrapper">
 			<section class="about-us">
 				<h2>О нас</h2>
-				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+				<p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
 				<p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
 				<ul class="about-list">
 					<li>Деловые Линии</li>
@@ -314,42 +314,8 @@
 	</section>
 
 
-	<script>
-		var slideButtons = document.querySelectorAll(".dot");
-		
-		slideButtons.forEach(function(slideButton){
-			slideButton.addEventListener("click",function(evt){
-				var currentDot = evt.currentTarget;
-				var slideId = currentDot.dataset.slide;
-				var slide = document.getElementById(slideId);
-				
-				
-				document.querySelector(".slides-list .active").classList.remove("active");
-				document.querySelector(".dot-current").classList.remove("dot-current");
-				
-				currentDot.classList.add("dot-current");
-				slide.classList.add("active");				
-			},false);
-		});
-		
-		var serviceButtons = document.querySelectorAll(".service-navigation .button");
-		
-		serviceButtons.forEach(function(serviceButton){
-			serviceButton.addEventListener("click",function(evt){
-				evt.preventDefault();
-				var serviceId = evt.currentTarget.getAttribute("href");
-				var service = document.querySelector(serviceId);
-								
-				document.querySelector(".service-list .current").classList.remove("current");				
-				service.classList.add("current");
-				
-			},false);
-		});
-		
-	</script>
 
-	
-	
+	<script src="js/slider.js"></script>
 	<script src="js/pop-map.js"></script>
 	<script src="js/pop-form.js"></script>
 

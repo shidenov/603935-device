@@ -248,7 +248,7 @@ input[type="radio"].visually-hidden {
 .login-link::before {
 	position: absolute;
 	left: 11px;
-	top: 8px;
+	top: 9px;
 	width: 13px;
 	height: 12px;
 	background-image: url("../img/svg-device/user.svg");
@@ -463,7 +463,7 @@ input[type="radio"].visually-hidden {
 .slides {
 	position: relative;
 
-	margin-bottom: 98px;
+	margin-bottom: 89px;
 }
 
 .slides-list {
@@ -636,15 +636,15 @@ input[type="radio"].visually-hidden {
 }
 
 .features td {
-	line-height: 1.4;
+	line-height: 1.5;
 }
 
 .features td:first-child {
-	width: 153px;
+	width: 156px;
 }
 
 .features td:nth-child(2) {
-	width: 134px;
+	width: 132px;
 	margin-right: 20px;
 }
 
@@ -694,7 +694,7 @@ input[type="radio"].visually-hidden {
 
 
 .goods-catalog {
-	margin-bottom: 76px;
+	margin-bottom: 80px;
 }
 
 .goods-catalog-list {
@@ -825,13 +825,11 @@ input[type="radio"].visually-hidden {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-
-
 .services {
 	margin-bottom: 94px;
-	padding-bottom: 70px;
+	padding-bottom: 68px;
 
-	background: linear-gradient(to bottom, #fff 103px, #e5e5e5 103px);
+	background: linear-gradient(to bottom, #fff 100px, #e5e5e5 100px);
 }
 
 .service-wrapper {
@@ -866,7 +864,7 @@ input[type="radio"].visually-hidden {
 	text-align: left;
 }
 
-.service-navigation .button:active {
+.service-navigation .button-active {
 	width: 100%;
 
 	background: none;
@@ -877,7 +875,7 @@ input[type="radio"].visually-hidden {
 .service-list {
 	margin: 0;
 	padding: 0;
-	padding-top: 72px;
+	padding-top: 69px;
 	padding-left: 116px;
 
 
@@ -949,7 +947,7 @@ input[type="radio"].visually-hidden {
 	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 47px;
 	line-height: 56px;
-	letter-spacing: 0.01em;
+	letter-spacing: 0.02em;
 }
 
 .service-list p {
@@ -963,10 +961,8 @@ input[type="radio"].visually-hidden {
 	color: #464646;
 }
 
-
-
 .brands {
-	margin-bottom: 88px;
+	margin-bottom: 87px;
 }
 
 .brand-list {
@@ -997,9 +993,6 @@ input[type="radio"].visually-hidden {
 .brand-item:hover img:last-child {
 	opacity: 1;
 }
-
-
-
 
 .about-us-wrapper {
 	display: flex;
@@ -1077,7 +1070,7 @@ input[type="radio"].visually-hidden {
 .about-list {
 	margin: 0;
 	margin-top: 66px;
-	margin-bottom: 53px;
+	margin-bottom: 54px;
 	padding: 0;
 	padding-left: 35px;
 
@@ -1115,7 +1108,7 @@ input[type="radio"].visually-hidden {
 
 .about-us .button,
 .contacts .button {
-	width: 260px;
+	width: 261px;
 
 
 	text-transform: uppercase;
@@ -1131,7 +1124,7 @@ input[type="radio"].visually-hidden {
 /*-----------------------------------------FOOTER---------------------------------------------------*/
 
 .main-footer {
-	padding-top: 60px;
+	padding-top: 61px;
 
 	background-color: #464646;
 
