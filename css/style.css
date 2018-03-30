@@ -864,6 +864,14 @@ input[type="radio"].visually-hidden {
 	text-align: left;
 }
 
+.service-navigation .button:active {
+	width: 100%;
+
+	background: none;
+	background-color: #000;
+	color: #f7e184;
+}
+
 .service-navigation .button-active {
 	width: 100%;
 
