@@ -31,7 +31,7 @@
 					</ul>
 				</div>
 				<ul class="site-navigation">
-					<li>
+					<li class="site-navigation-dropdown">
 						<a class="site-navigation-catalog" href="">Каталог товаров</a>
 						<ul class="goods">
 							<li>
@@ -62,7 +62,7 @@
 			<section class="slides">
 				<h2 class="visually-hidden">Лучшие товары</h2>
 				<ul class="slides-list">
-					<li class="first-slide">
+					<li class="first-slide active" id="slide-selfie-stick">
 						<div class="slider-img">
 							<img src="img/slider-1.png" width="384" height="486" alt="селфи-палка">
 						</div>
@@ -85,7 +85,7 @@
 						</div>
 					</li>
 					
-					<li class="second-slide">
+					<li class="second-slide" id="slide-smart-watch">
 						<div class="slider-img">
 							<img src="img/slider-2.png" width="345" height="485" alt="смарт часы">
 						</div>
@@ -103,7 +103,7 @@
 							</table>
 						</div>
 					</li>
-					<li class="third-slide">
+					<li class="third-slide" id="slide-quadrupter">
 						<div class="slider-img">
 							<img src="img/slider-3.png" width="526" height="334" alt="квадрокоптер">
 						</div>
@@ -125,9 +125,9 @@
 					</li>
 				</ul>
 				<div class="slider-buttons">
-					<button class="dot dot-current"></button>
-					<button class="dot"></button>
-					<button class="dot"></button>
+					<button class="dot dot-current" data-slide="slide-selfie-stick"><span class="visually-hidden">Селфи палка</span></button>
+					<button class="dot" data-slide="slide-smart-watch"><span class="visually-hidden">Смарт-часы</span></button>
+					<button class="dot" data-slide="slide-quadrupter"><span class="visually-hidden">Квадракоптер</span></button>
 				</div>				
 			</section>
 
@@ -163,20 +163,20 @@
 			<div class="content-wrapper service-wrapper">
 				<h2 class="visually-hidden">Услуги</h2>
 				<ul class="service-navigation">
-					<li><a class="button" ><span>Доставка</span></a></li>
-					<li><a class="button" ><span>Гарантия</span></a></li>
-					<li><a class="button" ><span>Кредит</span></a></li>
+					<li><a class="button" href="#service-item-delivery"><span>Доставка</span></a></li>
+					<li><a class="button" href="#service-item-guarantee"><span>Гарантия</span></a></li>
+					<li><a class="button" href="#service-item-credit"><span>Кредит</span></a></li>
 				</ul>
 				<ul class="service-list">
-					<li class="service-item service-item-delivery ">
+					<li class="service-item service-item-delivery current" id="service-item-delivery">
 						<h3>Доставка</h3>
 						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 					</li>
-					<li class="service-item service-item-guarantee">
+					<li class="service-item service-item-guarantee" id="service-item-guarantee">
 						<h3>Гарантия</h3>
 						<p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
 					</li>
-					<li class="service-item service-item-credit">
+					<li class="service-item service-item-credit" id="service-item-credit">
 						<h3>Кредит</h3>
 						<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
 					</li>
@@ -211,7 +211,7 @@
 			<section class="about-us">
 				<h2>О нас</h2>
 				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+				<p>Мы можем доставить ваш товар в самые отдаленные точки<br> России! DEVICE работает со многими транспортными компаниями:</p>
 				<ul class="about-list">
 					<li>Деловые Линии</li>
 					<li>Автотрейдинг</li>
@@ -222,11 +222,10 @@
 
 			<section class="contacts">
 				<h2>Контакты</h2>
-				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-				<!--дополнительные требования для карт позже,пока стандартные-->
-				<a href=""><img src="img/map.jpg" width="560" height="222" alt="карты"></a>
+				<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>				
+				<a class="js-map" href=""><img src="img/map.jpg" width="560" height="222" alt="карты"></a>
 
-				<button class="button">Напишите нам</button>
+				<button class="button js-write-us">Напишите нам</button>
 			</section>
 		</div>
 	</main>
@@ -307,8 +306,52 @@
 	
 	
 	<section class="modal modal-map">
-		<button class="modal-close">Закрыть</button>
+		
+		<h2 class="visually-hidden">Как до нас добраться</h2>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.5409098867076!2d71.42329605020619!3d51.17225264287455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424580d55804208f%3A0x8eeb11fd4356cb6!2z0L_RgNC-0YHQvy4g0KDQtdGB0L_Rg9Cx0LvQuNC60LgsINCQ0YHRgtCw0L3QsCAwMjAwMDA!5e0!3m2!1sru!2skz!4v1522322039632" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<p><img src="img/map-big.jpg" width="960" height="559" alt="Офис компании DEVICE по адресу ул. Набережная 20/14, Астана"></p>
+		<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
 	</section>
+
+
+	<script>
+		var slideButtons = document.querySelectorAll(".dot");
+		
+		slideButtons.forEach(function(slideButton){
+			slideButton.addEventListener("click",function(evt){
+				var currentDot = evt.currentTarget;
+				var slideId = currentDot.dataset.slide;
+				var slide = document.getElementById(slideId);
+				
+				
+				document.querySelector(".slides-list .active").classList.remove("active");
+				document.querySelector(".dot-current").classList.remove("dot-current");
+				
+				currentDot.classList.add("dot-current");
+				slide.classList.add("active");				
+			},false);
+		});
+		
+		var serviceButtons = document.querySelectorAll(".service-navigation .button");
+		
+		serviceButtons.forEach(function(serviceButton){
+			serviceButton.addEventListener("click",function(evt){
+				evt.preventDefault();
+				var serviceId = evt.currentTarget.getAttribute("href");
+				var service = document.querySelector(serviceId);
+								
+				document.querySelector(".service-list .current").classList.remove("current");				
+				service.classList.add("current");
+				
+			},false);
+		});
+		
+	</script>
+
+	
+	
+	<script src="js/pop-map.js"></script>
+	<script src="js/pop-form.js"></script>
 
 </body>
 

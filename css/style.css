@@ -49,7 +49,7 @@ img {
 	height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden,
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
 	position: absolute;
@@ -81,6 +81,7 @@ input[type="radio"].visually-hidden {
 
 	border: none;
 	background-image: linear-gradient(transparent 17px, #f0c52e 17px, #f0c52e 24px, transparent 24px);
+	background-color: transparent;
 
 	text-align: center;
 	text-transform: uppercase;
@@ -205,17 +206,21 @@ input[type="radio"].visually-hidden {
 	line-height: 30px;
 	letter-spacing: 0.01em;
 }
+
 .header-form-submit:hover {
 	background-color: #000;
-	color:#fff;
+	color: #fff;
 }
+
 .header-form-submit:active {
 	background-color: #000;
-	color: rgba(255,255,255,0.3);
+	color: rgba(255, 255, 255, 0.3);
 }
-.header-form input:focus + .header-form-submit {
+
+.header-form input:focus + .header-form-submit,
+.header-form-submit:active {
 	visibility: visible;
-} 
+}
 
 
 .user-navigation {
@@ -349,6 +354,8 @@ input[type="radio"].visually-hidden {
 
 
 .site-navigation a {
+	display: block;
+	
 	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 18px;
 	line-height: 24px;
@@ -374,7 +381,7 @@ input[type="radio"].visually-hidden {
 	content: "";
 }
 
-.site-navigation > li:nth-child(1) {
+.site-navigation > li:first-child {
 	margin-right: 294px;
 }
 
@@ -382,7 +389,7 @@ input[type="radio"].visually-hidden {
 	margin-right: 34px;
 }
 
-.site-navigation > li:nth-child(4) {
+.site-navigation > li:last-child {
 	margin-left: auto;
 }
 
@@ -414,7 +421,8 @@ input[type="radio"].visually-hidden {
 	background-color: #f7e296;
 	visibility: hidden;
 }
-.site-navigation > li:first-child:hover .goods {
+
+.site-navigation-dropdown:hover .goods {
 	visibility: visible;
 }
 
@@ -454,11 +462,12 @@ input[type="radio"].visually-hidden {
 
 .slides {
 	position: relative;
-	
+
 	margin-bottom: 98px;
 }
 
 .slides-list {
+	position: relative;
 	margin: 0;
 	padding: 0;
 	padding-top: 53px;
@@ -469,9 +478,49 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
+
+
+
+
 .slides-list li {
+	position: absolute;
+	left:-999999px;
+	top:-999999px;
+	
+	
 	display: flex;
+	min-height: 502px;
+	
+	visibility: hidden;
 }
+
+.slides-list li.active {
+	position: relative;
+	visibility: visible;
+	left: auto;
+	top: auto;
+}
+
+.slider-img {
+	flex-shrink: 0;
+	width: 560px;
+	box-sizing: border-box;
+	
+	text-align: center;
+}
+
+.slide-description {
+	position: relative;
+
+	width: 600px;	
+	padding-top: 79px;
+	padding-left: 40px;
+	padding-right: 60px;
+	box-sizing: border-box;
+	
+	flex-grow: 1;
+}
+
 
 .slides-list b {
 	font-size: 47px;
@@ -506,27 +555,11 @@ input[type="radio"].visually-hidden {
 	color: #464646;
 }
 
-.slider-img {
-	flex-shrink: 0;
-	width: 565px;
-	text-align: center;
-}
-
-.slide-description {
-	position: relative;
-
-	padding-top: 79px;
-	padding-left: 34px;
-	padding-right: 75px;
-
-	flex-grow: 1;
-}
-
 .slide-description::before {
 	content: "";
 	position: absolute;
 	top: 36px;
-	left: 36px;
+	left: 40px;
 	width: 100px;
 	height: 7px;
 	background-color: #fff;
@@ -541,19 +574,16 @@ input[type="radio"].visually-hidden {
 	font-size: 180px;
 	color: #fff;
 }
-
-.second-slide .slider-img {
-	padding-top: 11px;
+.first-slide .slider-img {
 	padding-left: 5px;
 }
 
-.second-slide .slide-description {
-	padding-left: 30px;
+.second-slide .slider-img {
+	box-sizing:border-box;	
+	padding-top: 11px;
+	padding-left: 17px;
 }
 
-.second-slide .slide-description::before {
-	left: 30px;
-}
 
 .second-slide .slide-description::after {
 	content: "02";
@@ -566,15 +596,14 @@ input[type="radio"].visually-hidden {
 }
 
 .third-slide .slider-img {
+    box-sizing:border-box;
 	padding-top: 65px;
-	padding-left: 12px;
+	padding-left: 29px;
 }
 
 .third-slide .slide-description {
 	z-index: 1;
-
-	padding-right: 48px;
-	padding-left: 23px;
+	padding-right: 47px;
 }
 
 .third-slide .slide-description::after {
@@ -588,19 +617,22 @@ input[type="radio"].visually-hidden {
 	z-index: -1;
 }
 
+
+
+
+
 .slide-description b {
 	display: inline-block;
 	margin-bottom: 18px;
 }
 
 .slide-description p {
-	margin-bottom: 42px;
+	margin-bottom: 43px;
 }
 
 .slide-description .button {
 	width: 220px;
-	height: 40px;
-	margin-bottom: 48px;
+	margin-bottom: 45px;
 }
 
 .features td {
@@ -608,11 +640,11 @@ input[type="radio"].visually-hidden {
 }
 
 .features td:first-child {
-	width: 156px;
+	width: 153px;
 }
 
 .features td:nth-child(2) {
-	width: 136px;
+	width: 134px;
 	margin-right: 20px;
 }
 
@@ -622,8 +654,9 @@ input[type="radio"].visually-hidden {
 
 .slider-buttons {
 	position: absolute;
-	bottom: 149px;
-	right: 83px;
+	z-index: 2;
+	bottom: 159px;
+	right: 84px;
 }
 
 .slider-buttons .dot {
@@ -633,39 +666,32 @@ input[type="radio"].visually-hidden {
 	margin-right: 16px;
 	padding: 0;
 	box-sizing: border-box;
-	
+
 	background-color: #fff;
 	border: 1px solid #000;
 	border-radius: 100%;
-	
+
 }
 
 .dot-current::before {
 	content: "";
 	position: absolute;
-	
+
 	width: 6px;
 	height: 6px;
 	margin-left: -3px;
 	margin-top: -3px;
 	box-sizing: border-box;
-	
+
 	border-radius: 100%;
 	border: 1px solid #000;
-	
+
 }
 
 .slider-buttons .dot:last-child {
 	margin-right: 0;
 }
 
-/*Потом уберу*/
-
-.slides-list li:nth-child(n + 2) {
-	display: none;
-}
-
-/*Потом уберу*/
 
 .goods-catalog {
 	margin-bottom: 76px;
@@ -826,22 +852,23 @@ input[type="radio"].visually-hidden {
 }
 
 .service-navigation li {
-	/*если указываю ширину у самого списка то она не действует и не оталкивает палочку сбоку*/
 	margin-bottom: 24px;
 }
 
 .service-navigation span {
 	display: inline-block;
 	width: 160px;
-	
+
 	text-align: center;
 }
+
 .service-navigation .button {
 	text-align: left;
 }
-.service-navigation .button:hover {
+
+.service-navigation .button:active {
 	width: 100%;
-	
+
 	background: none;
 	background-color: #000;
 	color: #f7e184;
@@ -858,9 +885,21 @@ input[type="radio"].visually-hidden {
 }
 
 .service-item {
-	position: relative;
+	position: absolute;
+	left:-999999px;
+	top:-999999px;
+	
 	padding: 0;
 	padding-right: 300px;
+	
+	visibility: hidden;
+}
+
+.service-list .current {
+	position: relative;
+	visibility: visible;
+	left: auto;
+	top: auto;
 }
 
 .service-item-delivery::after {
@@ -901,15 +940,6 @@ input[type="radio"].visually-hidden {
 
 	content: "";
 }
-
-/*Потом уберу*/
-
-.service-item-guarantee,
-.service-item-credit {
-	display: none;
-}
-
-/*Потом уберу*/
 
 .service-list h3 {
 	padding: 0;
@@ -980,7 +1010,7 @@ input[type="radio"].visually-hidden {
 .about-us {
 	position: relative;
 
-	width: 475px;
+	width: 490px;
 	padding-top: 51px;
 }
 
@@ -1092,8 +1122,7 @@ input[type="radio"].visually-hidden {
 	letter-spacing: 0.2em;
 }
 
-.contacts button {
-	background-color: transparent;
+.contacts .button {
 	padding: 10px 0 9px 0;
 }
 
@@ -1311,7 +1340,7 @@ input[type="radio"].visually-hidden {
 	position: relative;
 
 	padding-left: 32px;
-	
+
 	opacity: 0.3;
 }
 
@@ -1351,9 +1380,11 @@ input[type="radio"].visually-hidden {
 
 	content: "";
 }
+
 .social-button:hover {
 	opacity: 1;
 }
+
 .social-button:active {
 	opacity: 0.1;
 }
@@ -1363,41 +1394,110 @@ input[type="radio"].visually-hidden {
 	display: block;
 	padding-top: 3px;
 }
+
 .footer-bottom .academy-logo:hover {
 	opacity: 0.6;
 }
+
 .footer-bottom .academy-logo:active {
 	opacity: 0.3;
 }
+
 /*-----------------------------------------POP UP LOGIN---------------------------------------------------*/
+
+@keyframes bounce {
+	0% {
+		transform: translateX(-50%) translateY(-2000px);
+	}
+
+	70% {
+		transform: translateX(-50%) translateY(-44%);
+	}
+
+	100% {
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translateX(-51%) translateY(-50%);
+	}
+
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translateX(-49%) translateY(-50%);
+	}
+}
+
 
 .modal {
 	position: fixed;
-	
-	display: none;	
+
+	display: none;
 	width: 960px;
-	padding: 96px 100px 88px;
 	margin: 0 auto;
-	
+
 	background-color: #fff;
-	box-shadow: 0px 10px 20px 5px rgba(0,0,0,0.2);
+	box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.2);
 }
-.modal p{
+
+.modal-show {
+	display: flex;
+	animation: bounce 0.6s;
+}
+
+.modal-error {
+	animation: shake 0.6s;
+}
+
+.modal p {
 	margin: 0;
 }
-.write-us {
+
+.write-us,
+.modal-map {
 	top: 50%;
 	left: 50%;
 	box-sizing: border-box;
-	
-	transform: translate(-50%,-50%);
+
+	transform: translate(-50%, -50%);
 }
+
+.write-us {
+	padding: 65px 100px 88px;
+}
+
 .write-us .form-login {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;	
+	justify-content: space-between;
 	margin: 0 auto;
-	
+}
+
+.modal-map iframe {
+	position: relative;
+
+	z-index: 2;
+	border: none;
+}
+
+.modal-map p {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
 .modal-inner-wrapper {
@@ -1405,16 +1505,18 @@ input[type="radio"].visually-hidden {
 }
 
 .write-us input,
-.write-us textarea{	
+.write-us textarea {
 	margin: 9px 0 33px 0;
 	padding: 17px 0 18px 20px;
 	box-sizing: border-box;
-	
-	border: none; 
+
+	border: none;
 }
+
 .write-us input {
-	width: 360px;	
+	width: 360px;
 }
+
 .write-us textarea {
 	width: 760px;
 	min-height: 154px;
@@ -1423,50 +1525,54 @@ input[type="radio"].visually-hidden {
 
 .modal-close {
 	content: "";
-	
+
 	position: absolute;
-	top:22px;
+	z-index: 2;
+	top: 22px;
 	right: 22px;
-	
+
 	width: 54px;
 	height: 54px;
-	
+
 	font-size: 14px;
 	line-height: 19px;
 	text-align: center;
-	color: rgba(0,0,0,0.2);
+	color: rgba(0, 0, 0, 0.2);
 	letter-spacing: 0.01em;
-	
+
 	border: none;
 	outline: none;
 	border-radius: 50%;
 	background-color: #f7e296;
 	cursor: pointer;
 }
+
 .modal-close::before,
-.modal-close::after 
-{
+.modal-close::after {
 	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	
+
 	width: 32px;
 	height: 2px;
-	
+
 	background-color: #fff;
 }
+
 .modal-close::before {
 	transform: translateX(-50%) rotate(-45deg);
 }
+
 .modal-close::after {
 	transform: translateX(-50%) rotate(45deg);
 }
 
 .modal-close:hover,
-.modal-close:focus{
+.modal-close:focus {
 	background-color: #f0c52e;
 }
+
 .modal-close:active {
 	background-color: #faedc0;
 }
@@ -1499,12 +1605,14 @@ input[type="radio"].visually-hidden {
 .write-us .invalid-field:focus {
 	background-color: #f6dada;
 }
+
 .form-login button {
 	background-color: transparent;
-	
+
 	width: 200px;
 	padding: 10px 0 9px;
 }
+
 /*-----------------------------------------CATALOG.HTML---------------------------------------------------*/
 
 .main-header-inner {
@@ -1690,6 +1798,7 @@ input[type="radio"].visually-hidden {
 	position: relative;
 	width: 195px;
 	margin-top: 18px;
+	margin-bottom: 10px;
 	padding-left: 5px;
 }
 
@@ -1706,13 +1815,19 @@ input[type="radio"].visually-hidden {
 
 .range-controls .toggle {
 	position: absolute;
+	padding: 0;
 	top: -10px;
 	width: 4px;
 	height: 4px;
 	background-color: #ababab;
 	border: 8px solid #fff;
+	box-sizing: content-box;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+.range-controls .toggle:active {
+	transform: scale(1.1);
 }
 
 .range-controls .toggle-min {
@@ -1731,7 +1846,8 @@ input[type="radio"].visually-hidden {
 	font-size: 14px;
 	line-height: 22px;
 }
-.price-controls  label {
+
+.price-controls span {
 	display: inline-block;
 	width: 43%;
 }
@@ -1740,7 +1856,7 @@ input[type="radio"].visually-hidden {
 
 
 .filter-item:first-child {
-	margin-bottom: 26px;
+	margin-bottom: 35px;
 }
 
 .filter-input-checkbox + label::before {
@@ -1842,11 +1958,10 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 33px;
 }
 
-.form-filter button {
+.form-filter .button {
 	width: 200px;
 	padding-top: 10px;
 
-	background-color: transparent;
 }
 
 
@@ -1920,7 +2035,7 @@ input[type="radio"].visually-hidden {
 
 .sorting .sorting-item-current,
 .sorting .sorting-item-current:hover {
-	color: rgba(0,0,0,1);
+	color: rgba(0, 0, 0, 1);
 	opacity: 1;
 }
 
@@ -2014,10 +2129,6 @@ input[type="radio"].visually-hidden {
 	opacity: 0.7;
 }
 
-.catalog-list button {
-	background-color: transparent;
-}
-
 .catalog-list .button-compare {
 	background-color: transparent;
 	border: none;
@@ -2038,24 +2149,25 @@ input[type="radio"].visually-hidden {
 .catalog-list .button-compare:active {
 	color: rgba(0, 0, 0, 0.2);
 }
+
 .catalog-item.new::after {
 	content: "NEW";
-	
+
 	position: absolute;
-	top:29px;
+	top: 29px;
 	right: 27px;
-	
+
 	width: 30px;
 	height: 16px;
 	padding: 20px 13px;
-	
+
 	font-size: 14px;
 	line-height: 19px;
 	text-align: center;
-	color: rgba(0,0,0,0.2);
+	color: rgba(0, 0, 0, 0.2);
 	letter-spacing: 0.01em;
-	
-	border: 2px solid rgba(0,0,0,0.1);
+
+	border: 2px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
 }
 
@@ -2066,42 +2178,48 @@ input[type="radio"].visually-hidden {
 	align-items: center;
 	margin: 0;
 	padding: 0;
-	
+
 	list-style: none;
 	background-color: #ebebeb;
 }
+
 .pagination-item {
 	min-width: 39px;
 	text-align: center;
 }
+
 .pagination-list .item-prev a,
-.pagination-list .item-next a{
+.pagination-list .item-next a {
 	display: inline-block;
 	min-width: 137px;
-	padding-top:23px;
+	padding-top: 23px;
 	padding-bottom: 23px;
-	
-	
+
+
 	box-sizing: border-box;
 }
+
 .pagination-list .item-prev a {
 	padding-left: 30px;
 	padding-right: 29px;
 }
+
 .pagination-list .item-next a {
-	padding-left:  32px;
+	padding-left: 32px;
 	padding-right: 28px;
 }
+
 .pagination-list .item-prev {
 	margin-right: auto;
 	text-align: left;
 }
+
 .pagination-list .item-next {
 	margin-left: auto;
 	text-align: right;
 }
 
-.pagination-list a {	
+.pagination-list a {
 	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 24px;
@@ -2110,11 +2228,12 @@ input[type="radio"].visually-hidden {
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination-item a:hover{
-	color:rgba(0,0,0,0.6);
+.pagination-item a:hover {
+	color: rgba(0, 0, 0, 0.6);
 }
-.pagination-item a:active{
-	color: rgba(0,0,0,1);
+
+.pagination-item a:active {
+	color: rgba(0, 0, 0, 1);
 }
 
 .pagination-item-current a,
@@ -2122,9 +2241,10 @@ input[type="radio"].visually-hidden {
 .item-next a {
 	color: #000;
 }
+
 .pagination-item-current a:hover,
-.pagination-item-current a:active{
-	color:rgba(0,0,0,1);
+.pagination-item-current a:active {
+	color: rgba(0, 0, 0, 1);
 }
 
 .item-prev a:hover,
