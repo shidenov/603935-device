@@ -19,10 +19,7 @@ link.addEventListener("click", function (evt) {
 
 	if (storage) {
 		login.value = storage;
-		email.focus();
-	} else {
-		login.focus();
-	}
+	} 
 });
 
 close.addEventListener("click", function (evt) {

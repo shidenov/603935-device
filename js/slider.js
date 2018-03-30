@@ -1,6 +1,7 @@
 var slideButtons = document.querySelectorAll(".dot");
 
-slideButtons.forEach(function (slideButton) {
+
+Array.prototype.forEach.call(slideButtons, function(slideButton) {
 	slideButton.addEventListener("click", function (evt) {
 		var currentDot = evt.currentTarget;
 		var slideId = currentDot.dataset.slide;
@@ -15,9 +16,11 @@ slideButtons.forEach(function (slideButton) {
 	}, false);
 });
 
+
 var serviceButtons = document.querySelectorAll(".service-navigation .button");
 
-serviceButtons.forEach(function (serviceButton) {
+
+Array.prototype.forEach.call(serviceButtons, function(serviceButton) {
 	serviceButton.addEventListener("click", function (evt) {
 		evt.preventDefault();
 		var serviceId = evt.currentTarget.getAttribute("href");
@@ -31,3 +34,7 @@ serviceButtons.forEach(function (serviceButton) {
 
 	}, false);
 });
+
+
+
+

@@ -75,12 +75,15 @@ input[type="radio"].visually-hidden {
 }
 
 .button {
+	position: relative;
+	z-index: 0;
+	
 	display: inline-block;
 	box-sizing: border-box;
 	padding: 8px 0;
 
 	border: none;
-	background-image: linear-gradient(transparent 17px, #f0c52e 17px, #f0c52e 24px, transparent 24px);
+/*	background-image: linear-gradient(transparent 17px, #f0c52e 17px, #f0c52e 24px, transparent 24px);*/
 	background-color: transparent;
 
 	text-align: center;
@@ -89,10 +92,29 @@ input[type="radio"].visually-hidden {
 	letter-spacing: 0.2em;
 }
 
+.button::before {
+	content: "";
+	
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 0;
+	top:0;
+	bottom: 0;
+	
+	transform: scaleY(0.2);
+	transition: transform 0.3s ease-in;
+	
+	background-color: #f0c52e;
+}
+
+.button:hover::before {
+	transform: scaleY(1);
+}
+
 .button:hover,
 .button:focus {
 	cursor: pointer;
-	background-color: #f0c52e;
 }
 
 .button:active {
@@ -105,7 +127,7 @@ input[type="radio"].visually-hidden {
 	position: relative;
 
 	margin: 0 auto;
-	padding: 0 60px;
+	padding:0 57px 0 60px;
 
 
 	background-color: #f7e296;
@@ -416,6 +438,8 @@ input[type="radio"].visually-hidden {
 	padding-top: 21px;
 	padding-bottom: 34px;
 	box-sizing: border-box;
+	opacity: 0;
+	transition: opacity 0.4s ease-in;
 
 	list-style: none;
 	background-color: #f7e296;
@@ -424,6 +448,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-dropdown:hover .goods {
 	visibility: visible;
+	opacity: 1;
 }
 
 .goods li {
@@ -640,11 +665,15 @@ input[type="radio"].visually-hidden {
 }
 
 .features td:first-child {
-	width: 156px;
+	width: 152px;
+}
+
+.features td:first-child:last-child {
+	width: 100%;
 }
 
 .features td:nth-child(2) {
-	width: 132px;
+	width: 136px;
 	margin-right: 20px;
 }
 
@@ -864,7 +893,8 @@ input[type="radio"].visually-hidden {
 	text-align: left;
 }
 
-.service-navigation .button:active {
+.service-navigation .button:active ,
+.service-navigation .button-active {	
 	width: 100%;
 
 	background: none;
@@ -872,12 +902,9 @@ input[type="radio"].visually-hidden {
 	color: #f7e184;
 }
 
-.service-navigation .button-active {
-	width: 100%;
-
-	background: none;
-	background-color: #000;
-	color: #f7e184;
+.service-navigation .button:active::before ,
+.service-navigation .button-active::before {
+	display: none;
 }
 
 .service-list {

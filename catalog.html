@@ -2,6 +2,20 @@
 <html lang="ru">
 
 <head>
+
+	<!-- Pixel Glass -->
+	<style>
+	  HTML {
+		background-repeat: no-repeat;
+		background-position:  50% 0;
+		/* По умолчанию показывается мобильный макет */
+		background-image: url( "img/device-catalog.jpg" );
+	  }
+	</style>
+	<link href="css/pp.css" rel="stylesheet">
+	<script src="js/pp.js"></script>
+	<!-- // Pixel Glass -->
+
 	<meta charset="UTF-8">
 	<title>HTML Academy: Девайс</title>
 	<link rel="stylesheet" href="css/normalize.css">
@@ -81,8 +95,8 @@
 							<div class="scale">
 								<div class="bar"></div>
 							</div>
-							<button class="toggle toggle-min"></button>
-							<button class="toggle toggle-max"></button>
+							<button class="toggle toggle-min" type="button"><span class="visually-hidden">Цена от</span></button>
+							<button class="toggle toggle-max" type="button"><span class="visually-hidden">Цена до</span></button>
 						</div>
 						<div class="price-controls">
 							<span class="min-price">
