@@ -310,11 +310,11 @@ input[type="radio"].visually-hidden {
 }
 
 .user-functions li {
-	margin-right: 37px;
+	margin-right: 36px;
 }
 
 .user-functions li:last-child {
-	margin-right: 0;
+	margin-right: 3px;
 }
 
 .compare-link {
@@ -1802,7 +1802,7 @@ input[type="radio"].visually-hidden {
 
 .filter-item legend {
 	width: 200px;
-	margin-bottom: 17px;
+	margin-bottom: 35px;
 	padding-top: 10px;
 
 	border-top: 2px solid #000;
@@ -1825,7 +1825,6 @@ input[type="radio"].visually-hidden {
 .range-controls {
 	position: relative;
 	width: 195px;
-	margin-top: 18px;
 	margin-bottom: 10px;
 	padding-left: 5px;
 }
@@ -1880,11 +1879,12 @@ input[type="radio"].visually-hidden {
 	width: 43%;
 }
 
-
-
-
 .filter-item:first-child {
 	margin-bottom: 35px;
+}
+
+.filter-color legend {
+	margin-bottom: 18px;
 }
 
 .filter-input-checkbox + label::before {
@@ -1936,7 +1936,11 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-item:nth-child(2) {
-	margin-bottom: 32px;
+	margin-bottom: 31px;
+}
+
+.filter-item:nth-child(3) legend {
+	margin-bottom: 18px;
 }
 
 .filter-input-radio + label::before {
@@ -1983,7 +1987,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-item:nth-child(3) {
-	margin-bottom: 33px;
+	margin-bottom: 31px;
 }
 
 .form-filter .button {
@@ -1992,13 +1996,9 @@ input[type="radio"].visually-hidden {
 
 }
 
-
-
-
-
 .sorting h2 {
 	margin: 0;
-	margin-right: 50px;
+	margin-right: 49px;
 
 	font-size: 16px;
 	line-height: 24px;
@@ -2007,7 +2007,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting a {
-	margin-right: 30px;
+	margin-right: 29px;
 
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-size: 14px;
