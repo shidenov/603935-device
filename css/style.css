@@ -1005,6 +1005,7 @@ input[type="radio"].visually-hidden {
 
 .brand-list {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 0;
 	padding: 0;
@@ -1191,6 +1192,7 @@ input[type="radio"].visually-hidden {
 .footer-bottom::before {
 	content: "";
 	
+	display: block;
 	width: 80px;
 	height: 7px;
 	margin-right: auto;
