@@ -434,6 +434,7 @@ input[type="radio"].visually-hidden {
 
 
 	display: flex;
+	flex-wrap: wrap;
 	width: 1160px;
 	padding: 0;
 	padding-left: 60px;
@@ -1182,7 +1183,7 @@ input[type="radio"].visually-hidden {
 
 .footer-bottom {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	padding-bottom: 65px;
 }
@@ -1360,11 +1361,11 @@ input[type="radio"].visually-hidden {
 
 .footer-social {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	width: 140px;
 	height: 32px;
 	margin: 0;
-	margin-left: -54px;
+	margin-right: 54px;
 	padding: 0;
 	padding-bottom: 5px;
 
@@ -1374,7 +1375,6 @@ input[type="radio"].visually-hidden {
 .social-button {
 	position: relative;
 
-	margin-right: 54px;
 	padding-left: 32px;
 
 	opacity: 0.3;
@@ -1559,7 +1559,7 @@ input[type="radio"].visually-hidden {
 	min-height: 154px;
 	margin-bottom: 35px;
 	
-	resize: none;
+	resize: vertical;
 }
 
 .modal-close {
@@ -1634,7 +1634,7 @@ input[type="radio"].visually-hidden {
 .write-us input:focus,
 .write-us textarea:focus {
 	background-color: #ffffff;
-	box-shadow: 0 0 0 3px #f7e296;
+	box-shadow: inset 0 0 0 3px #f7e296;
 	outline: none;
 }
 
