@@ -32,7 +32,7 @@ body {
 	padding: 0;
 
 	font-family: "Gilroy Bold", "Arial", sans-serif;
-	font-weight: 700;
+	font-weight: 800;
 	font-size: 18px;
 	line-height: 24px;
 	color: #000000;
@@ -162,6 +162,7 @@ input[type="radio"].visually-hidden {
 
 .header-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: baseline;
 	margin-bottom: 29px;
 }
@@ -703,6 +704,7 @@ input[type="radio"].visually-hidden {
 	background-color: #fff;
 	border: 1px solid #000;
 	border-radius: 100%;
+	vertical-align: middle;
 
 }
 
@@ -849,11 +851,6 @@ input[type="radio"].visually-hidden {
 .goods-catalog-list a {
 	letter-spacing: 0.01;
 	color: #000;
-}
-
-.goods-catalog-list a:hover,
-.goods-catalog-list a:focus {
-	color: rgba(0, 0, 0, 0.6);
 }
 
 .goods-catalog-list a:active {
@@ -1155,7 +1152,7 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts .button {
-	padding: 10px 0 9px 0;
+	padding: 9px 0 9px 0;
 }
 
 
@@ -1192,8 +1189,11 @@ input[type="radio"].visually-hidden {
 
 .footer-bottom::before {
 	content: "";
+	
 	width: 80px;
 	height: 7px;
+	margin-right: auto;
+	
 	background-color: #ffc600;
 }
 
@@ -1360,7 +1360,7 @@ input[type="radio"].visually-hidden {
 
 .footer-social {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	width: 140px;
 	height: 32px;
 	margin: 0;
@@ -1374,6 +1374,7 @@ input[type="radio"].visually-hidden {
 .social-button {
 	position: relative;
 
+	margin-right: 54px;
 	padding-left: 32px;
 
 	opacity: 0.3;
@@ -1427,6 +1428,7 @@ input[type="radio"].visually-hidden {
 
 .footer-bottom .academy-logo {
 	display: block;
+	margin-left: auto;
 	padding-top: 3px;
 }
 
@@ -1556,6 +1558,8 @@ input[type="radio"].visually-hidden {
 	width: 760px;
 	min-height: 154px;
 	margin-bottom: 35px;
+	
+	resize: none;
 }
 
 .modal-close {
@@ -1578,7 +1582,7 @@ input[type="radio"].visually-hidden {
 	border: none;
 	outline: none;
 	border-radius: 50%;
-	background-color: #f7e296;
+	background-color: rgba(240,197,46,0.5);
 	cursor: pointer;
 }
 
@@ -1605,16 +1609,16 @@ input[type="radio"].visually-hidden {
 
 .modal-close:hover,
 .modal-close:focus {
-	background-color: #f0c52e;
+	background-color: rgba(240,197,46,1);
 }
 
 .modal-close:active {
-	background-color: #faedc0;
+	background-color: rgba(240,197,46,0.3);
 }
 
 .write-us input,
 .write-us textarea {
-	background-color: #f2f2f2;
+	background-color: rgba(230,230,230,0.5);
 
 	font-family: "Open Sans", "Arial", sans-serif;
 	font-weight: 300;
@@ -1624,13 +1628,14 @@ input[type="radio"].visually-hidden {
 
 .write-us input:hover,
 .write-us textarea:hover {
-	background-color: #ebebeb;
+	background-color: rgba(230,230,230,0.8);
 }
 
 .write-us input:focus,
 .write-us textarea:focus {
 	background-color: #ffffff;
-	outline-color: #f7e296;
+	box-shadow: 0 0 0 3px #f7e296;
+	outline: none;
 }
 
 .write-us .invalid-field {
@@ -1646,7 +1651,7 @@ input[type="radio"].visually-hidden {
 	background-color: transparent;
 
 	width: 200px;
-	padding: 10px 0 9px;
+	padding: 9px 0 9px;
 }
 
 /*-----------------------------------------CATALOG.HTML---------------------------------------------------*/
@@ -1818,6 +1823,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-item label {
+	display: block;
+	
 	font-family: "Open Sans Light", "Arial", sans-serif;
 	font-weight: 300;
 	font-size: 14px;
