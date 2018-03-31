@@ -1693,7 +1693,8 @@ input[type="radio"].visually-hidden {
 }
 
 .write-us {
-	padding: 65px 100px 88px;
+	padding: 93px 100px 80px;
+	box-sizing: border-box;
 }
 
 .write-us .form-login {
@@ -1726,25 +1727,31 @@ input[type="radio"].visually-hidden {
 	width: 360px;
 }
 
-.write-us input,
-.write-us textarea {
-	margin: 9px 0 33px 0;
-	padding: 17px 0 18px 20px;
+.write-us label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.write-us input {
+	width: 360px;
+	margin-bottom: 31px;
+	padding: 14px 20px 18px 20px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 
 	border: none;
 }
 
-.write-us input {
-	width: 360px;
-}
-
 .write-us textarea {
+	
 	width: 760px;
 	min-height: 154px;
-	margin-bottom: 35px;
+	margin-bottom: 37px;
+	padding: 14px 20px 18px 20px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 
+	border: none;
 	resize: vertical;
 }
 
