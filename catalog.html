@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<title>HTML Academy: Девайс</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
-	
-	 <div class="content-wrapper">
+	<div class="content-wrapper">
 		<header class="main-header main-header-inner">
 			<nav class="main-navigation">
 				<a class="main-header-logo" href="index.html">
@@ -22,7 +19,6 @@
 						<label class="visually-hidden" for="header-form-search">Поиск по сайту</label>
 						<input type="search" id="header-form-search" name="search" placeholder="Поиск по сайту">
 						<button class="header-form-submit" type="submit" >Найти</button>
-						
 					</form>
 					<ul class="user-navigation">
 						<li><a class="login-link" href="user.html">Валентин Петухов</a></li>
@@ -41,11 +37,11 @@
 								<a href="#catalog.html">Виртуальная реальность</a>
 								<a>Моноподы для селфи</a>
 								<a href="#catalog.html">Экшн-камеры</a>
-							</li>						
+							</li>
 							<li>
 								<a href="#catalog.html">Фитнес-браслеты</a>
 								<a href="#catalog.html">Умные часы</a>
-							</li>					
+							</li>
 							<li><a href="#catalog.html">Квадрокоптеры</a></li>
 						</ul>
 					</li>
@@ -56,20 +52,15 @@
 			</nav>
 		</header>
 	</div>
-	
-	
 	<main class="container">
-	
 		<div class="content-wrapper selfie-title">
 			<h1>Моноподы для селфи</h1>
-
 			<ul class="breadcrumbs">
 				<li><a href="index.html">Главная</a></li>
 				<li><a href="catalog.html">Каталог товаров</a></li>
 				<li class="breadcrumbs-current">Моноподы для селфи</li>
 			</ul>
 		</div>
-
 		<div class="catalog-container">
 			<section class="filters">
 				<div class="filter-title">
@@ -86,17 +77,12 @@
 							<button class="toggle toggle-max" type="button"><span class="visually-hidden">Цена до</span></button>
 						</div>
 						<div class="price-controls">
-							<span class="min-price">
-								от 0								
-							</span>
-							<span class="max-price">
-								до 5000								
-							</span>
+							<span class="min-price">от 0</span>
+							<span class="max-price">до 5000</span>
 							<label class="visually-hidden">Минимальная цена<input name="min-price" type="text"></label>
 							<label class="visually-hidden">Максимальная цена<input name="max-price" type="text"></label>
 						</div>
 					</fieldset>
-
 					<fieldset class="filter-item filter-color">
 						<legend>Цвет</legend>
 						<ul>
@@ -122,7 +108,6 @@
 							</li>
 						</ul>
 					</fieldset>
-
 					<fieldset class="filter-item">
 						<legend>Bluetooth</legend>
 						<ul>
@@ -137,66 +122,54 @@
 						</ul>
 					</fieldset>
 					<button class="button" type="submit">Показать</button>
-
 				</form>
 			</section>
-
-
 			<div class="catalog-main-wrapper">
-			
 				<div class="sorting-wrapper">
 					<section class="sorting">
 						<div class="sorting-inner">
 							<h2>Сортировка:</h2>
-							
 							<a class="sorting-item-current" href="">По цене</a>
 							<a href="">По типу</a>
 							<a href="">По популярности</a>
-						
 							<a class="arrow-up " href=""><span class="visually-hidden">По возрастанию</span></a>
 							<a class="arrow-down sorting-item-current" href=""><span class="visually-hidden">По убыванию</span></a>
 						</div>
 					</section>
 				</div>
-
-
 				<div class="catalog-wrapper">
 					<section class="catalog">
 						<h2 class="visually-hidden">Список моноподов</h2>
 						<ul class="catalog-list">
-							<li class="catalog-item">					
+							<li class="catalog-item">
 								<div class="item-hover-wrapper">
 									<img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
 									<div class="catalog-item-hover">
-										<!--я думаю это кнопка -->
 										<button class="button button-basket">В корзину</button>
 										<button class="button-compare">Добавить к сравнению</button>
 									</div>
 								</div>
-								
 								<div class="catalog-item-description">
 									<h3><a href="catalog-item.html">Любительская селфи&#8209;палка</a></h3>
 									<span class="good-price">500 руб.</span>
 								</div>
 							</li>
-							<li class="catalog-item">	
-								<div class="item-hover-wrapper">							
+							<li class="catalog-item">
+								<div class="item-hover-wrapper">
 									<div class="catalog-item-hover">
-										<!--я думаю это кнопка -->
 										<button class="button button-basket">В корзину</button>
 										<button class="button-compare">Добавить к сравнению</button>
 									</div>
 									<img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная сселфи-палка">
 								</div>
 								<div class="catalog-item-description">
-									<h3><a href="catalog-item.html">Профессиональная селфи&#8209;палка<!--вот здесь слово селфи-палка надо сделать чтоб не переносилось на дргуую строку--></a></h3>
+									<h3><a href="catalog-item.html">Профессиональная селфи&#8209;палка</a></h3>
 									<span class="good-price">1500 руб.</span>
 								</div>
 							</li>
-							<li class="catalog-item">	
-								<div class="item-hover-wrapper">								
+							<li class="catalog-item">
+								<div class="item-hover-wrapper">
 									<div class="catalog-item-hover">
-										<!--я думаю это кнопка -->
 										<button class="button button-basket">В корзину</button>
 										<button class="button-compare">Добавить к сравнению</button>
 									</div>
@@ -207,10 +180,9 @@
 									<span class="good-price">2500 руб.</span>
 								</div>
 							</li>
-							<li class="catalog-item new">	
-								<div class="item-hover-wrapper">								
+							<li class="catalog-item new">
+								<div class="item-hover-wrapper">
 									<div class="catalog-item-hover">
-										<!--я думаю это кнопка -->
 										<button class="button button-basket">В корзину</button>
 										<button class="button-compare">Добавить к сравнению</button>
 									</div>
@@ -222,27 +194,20 @@
 								</div>
 							</li>
 						</ul>
-
 						<ul class="pagination-list">
-							<li class="pagination-item item-prev"><a href="#">Назад</a></li>
+							<li class="pagination-item pagination-item-prev"><a href="#">Назад</a></li>
 							<li class="pagination-item pagination-item-current"><a>1</a></li>
 							<li class="pagination-item"><a href="#">2</a></li>
 							<li class="pagination-item"><a href="#">3</a></li>
-							<li class="pagination-item item-next"><a href="#">Вперед</a></li>
+							<li class="pagination-item pagination-item-next"><a href="#">Вперед</a></li>
 						</ul>
-
 					</section>
 				</div>
-
 			</div>
-
 		</div>
 	</main>
-
-
 	<footer class="main-footer main-footer-inner">
 		<div class="content-wrapper">
-			
 			<div class="footer-top">
 				<a class="main-footer-logo" href="index.html">
 					Device
@@ -252,47 +217,47 @@
 						<li><a class="login-link footer-login-link" href="user.html">Валентин Петухов</a></li>
 						<li><a class="login-exit footer-login-exit" href="#">Выйти</a></li>					
 					</ul>
-
 					<ul class="footer-user-functions">
 						<li><a class="compare-link footer-compare-link" href="compare.html">Сравнить</a></li>
 						<li><a class="basket-link footer-basket-link" href="basket.html">Корзина</a></li>
 					</ul>
 				</div>
 			</div>
-			
 			<div class="footer-center">
 				<p class="location">
 					г. Москва, ул. Строителей, 15
 				</p>
-
-				
 					<ul class="footer-list">
 						<li><a href="delivery.html">Доставка</a></li>
 						<li><a href="guaruntee.html">Гарантия</a></li>
 						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
-				
-
 				<span>Тел.: +7 (495) 495-95-95</span>
 			</div>
-
-			<div class="footer-bottom">				
-					<ul class="footer-social">
-						<li><a class="social-button facebook" href="https://www.facebook.com" aria-label="социальная сеть Фейсбук"></a></li>
-						<li><a class="social-button instagram" href="https://www.instagram.com" aria-label="социальная сеть Инстаграм"></a></li>
-						<li><a class="social-button twitter" href="https://twitter.com" aria-label="социальная сеть Твитер"></a></li>
-					</ul>
-			
-
+			<div class="footer-bottom">
+				<ul class="footer-social">
+					<li>
+						<a class="social-button facebook" href="https://www.facebook.com">
+							<span class="visually-hidden">социальная сеть Фейсбук</span>
+						</a>
+					</li>
+					<li>
+						<a class="social-button instagram" href="https://www.instagram.com">
+							<span class="visually-hidden">социальная сеть Инстаграм</span>		
+						</a>
+					</li>
+					<li>
+						<a class="social-button twitter" href="https://twitter.com" aria-label="социальная сеть Твитер">
+							<span class="visually-hidden">социальная сеть Твиттер</span>
+						</a>
+					</li>
+				</ul>
 				<a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
 					<img src="img/svg-device/logo-html.svg" width="27" height="35" alt="html academy">
-					<span class=visually-hidden>html academy</span>
+					<span class=visually-hidden>html academy</span>   
 				</a>
 			</div>
 		</div>
 	</footer>
-							
 </body>
-			
-
 </html>
