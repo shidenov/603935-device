@@ -77,13 +77,12 @@ input[type="radio"].visually-hidden {
 .button {
 	position: relative;
 	z-index: 0;
-	
+
 	display: inline-block;
 	box-sizing: border-box;
 	padding: 8px 0;
 
 	border: none;
-/*	background-image: linear-gradient(transparent 17px, #f0c52e 17px, #f0c52e 24px, transparent 24px);*/
 	background-color: transparent;
 
 	text-align: center;
@@ -94,17 +93,17 @@ input[type="radio"].visually-hidden {
 
 .button::before {
 	content: "";
-	
+
 	position: absolute;
 	z-index: -1;
 	left: 0;
 	right: 0;
-	top:0;
+	top: 0;
 	bottom: 0;
-	
+
 	transform: scaleY(0.2);
-	transition: transform 0.3s ease-in;
-	
+	transition: transform 0.2s ease-out;
+
 	background-color: #f0c52e;
 }
 
@@ -127,7 +126,7 @@ input[type="radio"].visually-hidden {
 	position: relative;
 
 	margin: 0 auto;
-	padding:0 57px 0 60px;
+	padding: 0 57px 0 60px;
 
 
 	background-color: #f7e296;
@@ -146,7 +145,6 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 10px;
 	margin-left: -2px;
 	font-size: 48px;
-	font-family: "Gilroy Bold", "Arial", sans-serif;
 	line-height: 48px;
 	text-transform: uppercase;
 	letter-spacing: 0.01em;
@@ -193,6 +191,7 @@ input[type="radio"].visually-hidden {
 	padding-left: 38px;
 	box-sizing: border-box;
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
 	letter-spacing: 0.01em;
@@ -224,6 +223,7 @@ input[type="radio"].visually-hidden {
 	background-color: transparent;
 
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
 	letter-spacing: 0.01em;
@@ -258,6 +258,7 @@ input[type="radio"].visually-hidden {
 	font-size: 15px;
 	line-height: 30px;
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	color: #000;
 }
 
@@ -353,6 +354,7 @@ input[type="radio"].visually-hidden {
 	font-size: 15px;
 	line-height: 30px;
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	color: #000;
 }
 
@@ -377,8 +379,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation a {
 	display: block;
-	
-	font-family: "Gilroy Bold", "Arial", sans-serif;
+
 	font-size: 18px;
 	line-height: 24px;
 	text-transform: uppercase;
@@ -438,9 +439,11 @@ input[type="radio"].visually-hidden {
 	padding-top: 21px;
 	padding-bottom: 34px;
 	box-sizing: border-box;
-	opacity: 0;
-	transition: opacity 0.4s ease-in;
 
+
+	transition: opacity 0.3s;
+
+	opacity: 0;
 	list-style: none;
 	background-color: #f7e296;
 	visibility: hidden;
@@ -466,13 +469,12 @@ input[type="radio"].visually-hidden {
 
 .goods a {
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 36px;
 	text-transform: none;
 	letter-spacing: 0.01em;
 }
-
-
 
 .goods a:hover,
 .goods a:focus {
@@ -503,46 +505,42 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
-
-
-
-
 .slides-list li {
 	position: absolute;
-	left:-999999px;
-	top:-999999px;
-	
-	
+	left: -999999px;
+	top: -999999px;
+
 	display: flex;
 	min-height: 502px;
-	
+
 	visibility: hidden;
 }
 
 .slides-list li.active {
 	position: relative;
-	visibility: visible;
 	left: auto;
 	top: auto;
+
+	visibility: visible;
 }
 
 .slider-img {
 	flex-shrink: 0;
 	width: 560px;
 	box-sizing: border-box;
-	
+
 	text-align: center;
 }
 
 .slide-description {
 	position: relative;
 
-	width: 600px;	
+	width: 600px;
 	padding-top: 79px;
 	padding-left: 40px;
 	padding-right: 60px;
 	box-sizing: border-box;
-	
+
 	flex-grow: 1;
 }
 
@@ -559,14 +557,20 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
 	letter-spacing: 0.01em;
 	color: #464646;
 }
 
+.features {
+	border-collapse: collapse;
+}
+
 .features tr {
 	font-family: "Gilroy Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 36px;
 	line-height: 48px;
 	letter-spacing: 0.01em;
@@ -574,6 +578,7 @@ input[type="radio"].visually-hidden {
 
 .features tr + tr {
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 13px;
 	line-height: 20px;
 	letter-spacing: 0.01em;
@@ -599,12 +604,13 @@ input[type="radio"].visually-hidden {
 	font-size: 180px;
 	color: #fff;
 }
+
 .first-slide .slider-img {
 	padding-left: 5px;
 }
 
 .second-slide .slider-img {
-	box-sizing:border-box;	
+	box-sizing: border-box;
 	padding-top: 11px;
 	padding-left: 17px;
 }
@@ -621,7 +627,7 @@ input[type="radio"].visually-hidden {
 }
 
 .third-slide .slider-img {
-    box-sizing:border-box;
+	box-sizing: border-box;
 	padding-top: 65px;
 	padding-left: 29px;
 }
@@ -642,10 +648,6 @@ input[type="radio"].visually-hidden {
 	z-index: -1;
 }
 
-
-
-
-
 .slide-description b {
 	display: inline-block;
 	margin-bottom: 18px;
@@ -661,11 +663,11 @@ input[type="radio"].visually-hidden {
 }
 
 .features td {
-	line-height: 1.5;
+	line-height: 1.6;
 }
 
 .features td:first-child {
-	width: 152px;
+	width: 156px;
 }
 
 .features td:first-child:last-child {
@@ -689,6 +691,8 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-buttons .dot {
+	position: relative;
+
 	display: inline-block;
 	width: 12px;
 	height: 12px;
@@ -705,6 +709,8 @@ input[type="radio"].visually-hidden {
 .dot-current::before {
 	content: "";
 	position: absolute;
+	top: 50%;
+	left: 50%;
 
 	width: 6px;
 	height: 6px;
@@ -874,7 +880,6 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 	padding-top: 80px;
 
-
 	list-style: none;
 }
 
@@ -893,8 +898,8 @@ input[type="radio"].visually-hidden {
 	text-align: left;
 }
 
-.service-navigation .button:active ,
-.service-navigation .button-active {	
+.service-navigation .button:active,
+.service-navigation .button-active {
 	width: 100%;
 
 	background: none;
@@ -902,7 +907,7 @@ input[type="radio"].visually-hidden {
 	color: #f7e184;
 }
 
-.service-navigation .button:active::before ,
+.service-navigation .button:active::before,
 .service-navigation .button-active::before {
 	display: none;
 }
@@ -919,12 +924,12 @@ input[type="radio"].visually-hidden {
 
 .service-item {
 	position: absolute;
-	left:-999999px;
-	top:-999999px;
-	
+	left: -999999px;
+	top: -999999px;
+
 	padding: 0;
 	padding-right: 300px;
-	
+
 	visibility: hidden;
 }
 
@@ -979,7 +984,6 @@ input[type="radio"].visually-hidden {
 	margin: 0;
 	margin-bottom: 27px;
 
-	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 47px;
 	line-height: 56px;
 	letter-spacing: 0.02em;
@@ -990,6 +994,7 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
 	letter-spacing: 0.02em;
@@ -1077,7 +1082,6 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 44px;
 	padding: 0;
 
-	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 47px;
 	line-height: 48px;
 	letter-spacing: 0.01em;
@@ -1089,6 +1093,7 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
 	color: #464646;
@@ -1116,7 +1121,6 @@ input[type="radio"].visually-hidden {
 .about-list li {
 	position: relative;
 
-	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 40px;
 }
@@ -1203,7 +1207,6 @@ input[type="radio"].visually-hidden {
 	margin-left: -2px;
 
 	font-size: 48px;
-	font-family: "Gilroy Bold", "Arial", sans-serif;
 	line-height: 48px;
 	text-transform: uppercase;
 	letter-spacing: 0.01em;
@@ -1248,6 +1251,7 @@ input[type="radio"].visually-hidden {
 	font-size: 15px;
 	line-height: 35px;
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	color: #fff;
 	opacity: 0.7;
 }
@@ -1284,6 +1288,7 @@ input[type="radio"].visually-hidden {
 	font-size: 15px;
 	line-height: 35px;
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	color: #fff;
 	opacity: 0.7;
 }
@@ -1309,6 +1314,7 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
 }
@@ -1347,6 +1353,7 @@ input[type="radio"].visually-hidden {
 
 .main-footer span {
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	line-height: 30px;
 }
@@ -1610,6 +1617,7 @@ input[type="radio"].visually-hidden {
 	background-color: #f2f2f2;
 
 	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 14px;
 	line-height: 18px;
 }
@@ -1678,6 +1686,7 @@ input[type="radio"].visually-hidden {
 	display: inline-block;
 
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 14px;
 	line-height: 24px;
 	letter-spacing: 0.01em;
@@ -1810,6 +1819,7 @@ input[type="radio"].visually-hidden {
 
 .filter-item label {
 	font-family: "Open Sans Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 14px;
 	line-height: 40px;
 	letter-spacing: 0.01em;
@@ -1869,6 +1879,7 @@ input[type="radio"].visually-hidden {
 	margin-top: 1px;
 
 	font-family: "Gilroy Light", "Arial", sans-serif;
+	font-weight: 300;
 	color: rgba(0, 0, 0, 0.2);
 	font-size: 14px;
 	line-height: 22px;
@@ -1992,8 +2003,6 @@ input[type="radio"].visually-hidden {
 
 .form-filter .button {
 	width: 200px;
-	padding-top: 10px;
-
 }
 
 .sorting h2 {
@@ -2010,6 +2019,7 @@ input[type="radio"].visually-hidden {
 	margin-right: 29px;
 
 	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 18px;
 	color: rgba(0, 0, 0, 0.3);
@@ -2067,9 +2077,6 @@ input[type="radio"].visually-hidden {
 	opacity: 1;
 }
 
-
-
-
 .catalog-list {
 	list-style: none;
 }
@@ -2121,17 +2128,24 @@ input[type="radio"].visually-hidden {
 	align-items: center;
 	padding-top: 175px;
 
-	opacity: 0;
+	/*	opacity: 0;*/
 }
 
 .catalog-item-hover:hover {
-	opacity: 1;
+	/*	opacity: 1;*/
 	background-color: rgba(238, 238, 238, 0.7);
 }
 
 .catalog-item .button-basket {
 	width: 200px;
-	padding-top: 10px;
+	margin-bottom: 19px;
+
+	opacity: 0;
+}
+
+.catalog-item-hover:hover .button-basket,
+.catalog-list .button-basket:focus {
+	opacity: 1;
 }
 
 .catalog-list a {
@@ -2148,6 +2162,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-list .good-price {
 	font-family: "Gilroy Light", "Arial", sans-serif;
+	font-weight: 300;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.01em;
@@ -2163,10 +2178,18 @@ input[type="radio"].visually-hidden {
 
 	text-transform: none;
 	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 400;
 	font-size: 13px;
 	line-height: 20px;
 	color: rgba(0, 0, 0, 0.5);
 	letter-spacing: 0.01em;
+
+	opacity: 0;
+}
+
+.catalog-item-hover:hover .button-compare,
+.catalog-list .button-compare:focus {
+	opacity: 1;
 }
 
 .catalog-list .button-compare:hover,
@@ -2248,7 +2271,6 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-list a {
-	font-family: "Gilroy Bold", "Arial", sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.2em;
