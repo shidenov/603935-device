@@ -557,6 +557,8 @@ input[type="radio"].visually-hidden {
 	min-height: 502px;
 
 	visibility: hidden;
+	transition: 0.5s ease-in-out;
+	opacity: 0;
 }
 
 .slides-list li.active {
@@ -565,6 +567,7 @@ input[type="radio"].visually-hidden {
 	top: auto;
 
 	visibility: visible;
+	opacity: 1;
 }
 
 .slider-img {
@@ -986,6 +989,8 @@ input[type="radio"].visually-hidden {
 	padding-right: 300px;
 
 	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
 }
 
 .service-list .current {
@@ -993,6 +998,8 @@ input[type="radio"].visually-hidden {
 	visibility: visible;
 	left: auto;
 	top: auto;
+
+	opacity: 1;
 }
 
 .service-item-delivery::after {
